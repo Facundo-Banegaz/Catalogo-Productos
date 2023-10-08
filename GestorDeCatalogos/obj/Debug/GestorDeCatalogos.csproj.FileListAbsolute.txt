@@ -1,0 +1,14 @@
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\Debug\GestorDeCatalogos.exe.config
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\Debug\GestorDeCatalogos.exe
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\Debug\GestorDeCatalogos.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.AssemblyReference.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.SuggestedBindingRedirects.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmPresentacion.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.Properties.Resources.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.GenerateResource.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.CoreCompileInputs.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.exe
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmCatalogo.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.CopyComplete

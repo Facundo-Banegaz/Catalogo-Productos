@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace GestorDeCatalogos
 {
-    public partial class Form1 : Form
+    public partial class FrmPresentacion : Form
     {
-        public Form1()
+        public FrmPresentacion()
         {
             InitializeComponent();
+        }
+
+        private void btn_siguiente_Click(object sender, EventArgs e)
+        {
+            FrmCatalogo frmCatalogo = new FrmCatalogo();
+            frmCatalogo.Show();
+            this.Hide();
         }
     }
 }
