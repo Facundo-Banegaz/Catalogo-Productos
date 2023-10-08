@@ -38,7 +38,7 @@
             this.menu_title = new System.Windows.Forms.MenuStrip();
             this.menu_salir = new FontAwesome.Sharp.IconMenuItem();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.contenedor3 = new System.Windows.Forms.Panel();
+            this.contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.menu_title.SuspendLayout();
             this.SuspendLayout();
@@ -163,16 +163,16 @@
             // menu_salir
             // 
             this.menu_salir.AutoSize = false;
-            this.menu_salir.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.menu_salir.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_salir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menu_salir.BackColor = System.Drawing.Color.DodgerBlue;
+            this.menu_salir.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_salir.ForeColor = System.Drawing.Color.Black;
             this.menu_salir.IconChar = FontAwesome.Sharp.IconChar.CircleArrowRight;
-            this.menu_salir.IconColor = System.Drawing.Color.Black;
+            this.menu_salir.IconColor = System.Drawing.Color.Red;
             this.menu_salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menu_salir.IconSize = 60;
+            this.menu_salir.IconSize = 80;
             this.menu_salir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_salir.Name = "menu_salir";
-            this.menu_salir.Size = new System.Drawing.Size(182, 80);
+            this.menu_salir.Size = new System.Drawing.Size(182, 140);
             this.menu_salir.Text = "Salir";
             this.menu_salir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.menu_salir.Click += new System.EventHandler(this.menu_salir_Click);
@@ -181,28 +181,28 @@
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_title.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_title.Location = new System.Drawing.Point(24, 49);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(555, 44);
+            this.lbl_title.Size = new System.Drawing.Size(760, 60);
             this.lbl_title.TabIndex = 2;
-            this.lbl_title.Text = "Bienvenido al Catálogo de  Comercio";
+            this.lbl_title.Text = "Bienvenido al Catálogo del  Comercio";
             // 
-            // contenedor3
+            // contenedor
             // 
-            this.contenedor3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor3.Location = new System.Drawing.Point(0, 236);
-            this.contenedor3.Name = "contenedor3";
-            this.contenedor3.Size = new System.Drawing.Size(1828, 714);
-            this.contenedor3.TabIndex = 3;
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(0, 236);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(1828, 714);
+            this.contenedor.TabIndex = 3;
             // 
             // FrmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1828, 950);
-            this.Controls.Add(this.contenedor3);
+            this.Controls.Add(this.contenedor);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menu_title);
@@ -235,6 +235,6 @@
         private FontAwesome.Sharp.IconMenuItem menu_eliminar;
         private FontAwesome.Sharp.IconMenuItem menu_acerca;
         private FontAwesome.Sharp.IconMenuItem menu_salir;
-        private System.Windows.Forms.Panel contenedor3;
+        private System.Windows.Forms.Panel contenedor;
     }
 }
