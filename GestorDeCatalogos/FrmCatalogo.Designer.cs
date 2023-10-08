@@ -38,6 +38,7 @@
             this.menu_title = new System.Windows.Forms.MenuStrip();
             this.menu_salir = new FontAwesome.Sharp.IconMenuItem();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.contenedor3 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.menu_title.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 148);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1682, 88);
+            this.menuStrip1.Size = new System.Drawing.Size(1828, 88);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,7 +79,7 @@
             // 
             this.menu_modificar.AutoSize = false;
             this.menu_modificar.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_modificar.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.menu_modificar.IconChar = FontAwesome.Sharp.IconChar.FileEdit;
             this.menu_modificar.IconColor = System.Drawing.Color.Black;
             this.menu_modificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menu_modificar.IconSize = 60;
@@ -106,10 +107,10 @@
             // 
             this.menu_suspender.AutoSize = false;
             this.menu_suspender.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_suspender.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.menu_suspender.IconChar = FontAwesome.Sharp.IconChar.Cancel;
             this.menu_suspender.IconColor = System.Drawing.Color.Black;
             this.menu_suspender.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menu_suspender.IconSize = 80;
+            this.menu_suspender.IconSize = 60;
             this.menu_suspender.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menu_suspender.Name = "menu_suspender";
             this.menu_suspender.Size = new System.Drawing.Size(100, 80);
@@ -156,7 +157,7 @@
             this.menu_title.Name = "menu_title";
             this.menu_title.Padding = new System.Windows.Forms.Padding(10, 4, 0, 4);
             this.menu_title.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menu_title.Size = new System.Drawing.Size(1682, 148);
+            this.menu_title.Size = new System.Drawing.Size(1828, 148);
             this.menu_title.TabIndex = 1;
             // 
             // menu_salir
@@ -188,16 +189,25 @@
             this.lbl_title.TabIndex = 2;
             this.lbl_title.Text = "Bienvenido al Catálogo de  Comercio";
             // 
+            // contenedor3
+            // 
+            this.contenedor3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor3.Location = new System.Drawing.Point(0, 236);
+            this.contenedor3.Name = "contenedor3";
+            this.contenedor3.Size = new System.Drawing.Size(1828, 714);
+            this.contenedor3.TabIndex = 3;
+            // 
             // FrmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1682, 950);
+            this.ClientSize = new System.Drawing.Size(1828, 950);
+            this.Controls.Add(this.contenedor3);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menu_title);
             this.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmCatalogo";
@@ -225,5 +235,6 @@
         private FontAwesome.Sharp.IconMenuItem menu_eliminar;
         private FontAwesome.Sharp.IconMenuItem menu_acerca;
         private FontAwesome.Sharp.IconMenuItem menu_salir;
+        private System.Windows.Forms.Panel contenedor3;
     }
 }
