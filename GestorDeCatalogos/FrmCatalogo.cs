@@ -26,5 +26,11 @@ namespace GestorDeCatalogos
         {
             Application.Exit();
         }
+
+        private void menu_item_articulo_Click(object sender, EventArgs e)
+        {
+            FrmAgregar frmAgregar = new FrmAgregar();
+            frmAgregar.ShowDialog();
+        }
     }
 }
