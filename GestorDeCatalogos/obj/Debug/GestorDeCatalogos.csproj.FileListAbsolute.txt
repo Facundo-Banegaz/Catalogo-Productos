@@ -13,3 +13,6 @@ C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\D
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.CopyComplete
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmAgregar.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmMarca.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmCategoria.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmAcercaDe.resources

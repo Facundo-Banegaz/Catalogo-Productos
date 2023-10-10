@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace GestorDeCatalogos
 {
-    public partial class FrmAgregar : Form
+    public partial class FrmCategoria : Form
     {
-        public FrmAgregar()
+        public FrmCategoria()
         {
             InitializeComponent();
-        }
-
-   
-
-        private void FrmAgregar_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_filtro_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
