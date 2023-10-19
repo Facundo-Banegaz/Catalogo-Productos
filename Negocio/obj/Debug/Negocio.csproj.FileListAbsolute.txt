@@ -1,0 +1,2 @@
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache

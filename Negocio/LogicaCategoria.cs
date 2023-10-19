@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datos;
+using Dominio;
 
 namespace Negocio
 {
-    public class Class1
+    internal class LogicaCategoria
     {
-                
-
     }
 }

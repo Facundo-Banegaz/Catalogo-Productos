@@ -14,5 +14,7 @@ C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\D
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.csproj.CopyComplete
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmAgregar.resources
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmMarca.resources
-C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmCategoria.resources
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmAcercaDe.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmDetalle.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmDetalleArticulo.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmCategoria.resources

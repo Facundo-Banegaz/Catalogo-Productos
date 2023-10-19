@@ -77,6 +77,18 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalle.Designer.cs">
+      <DependentUpon>FrmDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetalleArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleArticulo.Designer.cs">
+      <DependentUpon>FrmDetalleArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalle.resx">
+      <DependentUpon>FrmDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleArticulo.resx">
+      <DependentUpon>FrmDetalleArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMarca.resx">
       <DependentUpon>FrmMarca.cs</DependentUpon>
@@ -133,6 +151,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{eb2ccd30-3d5f-45fd-978a-38530db4f4c0}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{2241877f-0580-4161-97ae-9830be845960}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

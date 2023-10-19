@@ -31,6 +31,7 @@
             this.lbl_title = new System.Windows.Forms.Label();
             this.btn_siguiente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.btn_siguiente.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_siguiente.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_siguiente.Location = new System.Drawing.Point(373, 545);
+            this.btn_siguiente.Location = new System.Drawing.Point(267, 541);
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(211, 52);
             this.btn_siguiente.TabIndex = 1;
@@ -69,16 +70,32 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_salir
+            // 
+            this.btn_salir.BackColor = System.Drawing.Color.Crimson;
+            this.btn_salir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salir.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_salir.Location = new System.Drawing.Point(511, 541);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(211, 52);
+            this.btn_salir.TabIndex = 3;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = false;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // FrmPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1023, 626);
+            this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_siguiente);
             this.Controls.Add(this.lbl_title);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPresentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Presentacion";
@@ -93,6 +110,7 @@
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Button btn_siguiente;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_salir;
     }
 }
 

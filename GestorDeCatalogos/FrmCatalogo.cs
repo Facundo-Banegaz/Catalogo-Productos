@@ -69,7 +69,8 @@ namespace GestorDeCatalogos
 
         private void menu_categoria_Click(object sender, EventArgs e)
         {
-            abrirForm((IconMenuItem)sender, new FrmMarca());
+            
+            abrirForm((IconMenuItem)sender, new FrmCategoria());
         }
 
         private void menu_acerca_Click(object sender, EventArgs e)

@@ -39,25 +39,25 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.gbo_container = new System.Windows.Forms.GroupBox();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btn_detalle = new FontAwesome.Sharp.IconButton();
+            this.btn_editar = new FontAwesome.Sharp.IconButton();
+            this.btn_eliminar = new FontAwesome.Sharp.IconButton();
+            this.btn_suspender = new FontAwesome.Sharp.IconButton();
+            this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_contenedor_articulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.gbo_container.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_filtro
@@ -93,6 +93,7 @@
             // iconButton2
             // 
             this.iconButton2.BackColor = System.Drawing.Color.LimeGreen;
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton2.ForeColor = System.Drawing.Color.White;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Download;
@@ -186,7 +187,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(454, 223);
+            this.dataGridView1.Location = new System.Drawing.Point(494, 229);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -220,6 +221,13 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Marcas:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(26, 68);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(338, 32);
+            this.numericUpDown1.TabIndex = 74;
             // 
             // label12
             // 
@@ -271,11 +279,11 @@
             // 
             this.gbo_container.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbo_container.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.gbo_container.Controls.Add(this.iconButton4);
-            this.gbo_container.Controls.Add(this.iconButton6);
-            this.gbo_container.Controls.Add(this.iconButton7);
-            this.gbo_container.Controls.Add(this.iconButton5);
-            this.gbo_container.Controls.Add(this.iconButton8);
+            this.gbo_container.Controls.Add(this.btn_detalle);
+            this.gbo_container.Controls.Add(this.btn_editar);
+            this.gbo_container.Controls.Add(this.btn_eliminar);
+            this.gbo_container.Controls.Add(this.btn_suspender);
+            this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbo_container.Location = new System.Drawing.Point(29, 366);
             this.gbo_container.Name = "gbo_container";
@@ -284,110 +292,115 @@
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
             // 
-            // iconButton4
+            // btn_detalle
             // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.BackColor = System.Drawing.Color.Black;
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 40;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton4.Location = new System.Drawing.Point(16, 122);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(291, 50);
-            this.iconButton4.TabIndex = 25;
-            this.iconButton4.Text = "Ver Detalle";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.btn_detalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_detalle.BackColor = System.Drawing.Color.Black;
+            this.btn_detalle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_detalle.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_detalle.ForeColor = System.Drawing.Color.White;
+            this.btn_detalle.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_detalle.IconColor = System.Drawing.Color.White;
+            this.btn_detalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_detalle.IconSize = 40;
+            this.btn_detalle.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_detalle.Location = new System.Drawing.Point(16, 122);
+            this.btn_detalle.Name = "btn_detalle";
+            this.btn_detalle.Size = new System.Drawing.Size(291, 50);
+            this.btn_detalle.TabIndex = 25;
+            this.btn_detalle.Text = "Ver Detalle";
+            this.btn_detalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_detalle.UseVisualStyleBackColor = false;
+            this.btn_detalle.Click += new System.EventHandler(this.btn_detalle_Click);
             // 
-            // iconButton6
+            // btn_editar
             // 
-            this.iconButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 40;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton6.Location = new System.Drawing.Point(16, 178);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(291, 50);
-            this.iconButton6.TabIndex = 29;
-            this.iconButton6.Text = "Editar";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = false;
+            this.btn_editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_editar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.White;
+            this.btn_editar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btn_editar.IconColor = System.Drawing.Color.White;
+            this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_editar.IconSize = 40;
+            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_editar.Location = new System.Drawing.Point(16, 178);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(291, 50);
+            this.btn_editar.TabIndex = 29;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
-            // iconButton7
+            // btn_eliminar
             // 
-            this.iconButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton7.BackColor = System.Drawing.Color.Crimson;
-            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton7.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton7.IconColor = System.Drawing.Color.White;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 40;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton7.Location = new System.Drawing.Point(16, 290);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(291, 50);
-            this.iconButton7.TabIndex = 28;
-            this.iconButton7.Text = "Eminar";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_eliminar.BackColor = System.Drawing.Color.Crimson;
+            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_eliminar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.ForeColor = System.Drawing.Color.White;
+            this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btn_eliminar.IconColor = System.Drawing.Color.White;
+            this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_eliminar.IconSize = 40;
+            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eliminar.Location = new System.Drawing.Point(16, 290);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(291, 50);
+            this.btn_eliminar.TabIndex = 28;
+            this.btn_eliminar.Text = "Eminar";
+            this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // iconButton5
+            // btn_suspender
             // 
-            this.iconButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 40;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton5.Location = new System.Drawing.Point(16, 234);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(291, 50);
-            this.iconButton5.TabIndex = 26;
-            this.iconButton5.Text = "Suspender";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.btn_suspender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_suspender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_suspender.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_suspender.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suspender.ForeColor = System.Drawing.Color.White;
+            this.btn_suspender.IconChar = FontAwesome.Sharp.IconChar.Cancel;
+            this.btn_suspender.IconColor = System.Drawing.Color.White;
+            this.btn_suspender.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_suspender.IconSize = 40;
+            this.btn_suspender.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_suspender.Location = new System.Drawing.Point(16, 234);
+            this.btn_suspender.Name = "btn_suspender";
+            this.btn_suspender.Size = new System.Drawing.Size(291, 50);
+            this.btn_suspender.TabIndex = 26;
+            this.btn_suspender.Text = "Suspender";
+            this.btn_suspender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_suspender.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_suspender.UseVisualStyleBackColor = false;
+            this.btn_suspender.Click += new System.EventHandler(this.btn_suspender_Click);
             // 
-            // iconButton8
+            // btn_guardar
             // 
-            this.iconButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton8.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton8.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.iconButton8.IconColor = System.Drawing.Color.White;
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 40;
-            this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton8.Location = new System.Drawing.Point(16, 57);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(291, 50);
-            this.iconButton8.TabIndex = 27;
-            this.iconButton8.Text = "Guardar";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton8.UseVisualStyleBackColor = false;
+            this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_guardar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_guardar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.Color.White;
+            this.btn_guardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btn_guardar.IconColor = System.Drawing.Color.White;
+            this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_guardar.IconSize = 40;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_guardar.Location = new System.Drawing.Point(16, 57);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(291, 50);
+            this.btn_guardar.TabIndex = 27;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // label16
             // 
@@ -400,13 +413,6 @@
             this.label16.Size = new System.Drawing.Size(191, 35);
             this.label16.TabIndex = 41;
             this.label16.Text = "Detalle Articulo";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(26, 68);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(338, 32);
-            this.numericUpDown1.TabIndex = 74;
             // 
             // FrmMarca
             // 
@@ -429,8 +435,8 @@
             this.panel_contenedor_articulo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.gbo_container.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -453,11 +459,11 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox gbo_container;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton7;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btn_detalle;
+        private FontAwesome.Sharp.IconButton btn_editar;
+        private FontAwesome.Sharp.IconButton btn_eliminar;
+        private FontAwesome.Sharp.IconButton btn_suspender;
+        private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
     }

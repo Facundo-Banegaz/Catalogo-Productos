@@ -1,0 +1,6 @@
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\bin\Debug\Datos.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\bin\Debug\Datos.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\obj\Debug\Datos.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Datos\obj\Debug\Datos.pdb
