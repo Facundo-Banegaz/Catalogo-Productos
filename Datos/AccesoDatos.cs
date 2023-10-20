@@ -46,7 +46,27 @@ namespace Datos
                 throw ex;
             }
         }
+        public void ejecutarAccion()
+        {
+            comand.Connection = conection;
 
+            try
+            {
+                conection.Open();
+                comand.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        
+        }
+        public void setearParametro(string nombre, object valor)
+        {
+            comand.Parameters.AddWithValue(nombre,valor);
+        }
         public void CerrarConection()
         {
             if (lector != null)

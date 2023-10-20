@@ -35,20 +35,24 @@ namespace Negocio
 
 
                     aux.id = (int)accesoDatos.Lector["Id"];
+
                     aux.Codigo = (string)accesoDatos.Lector["Codigo"];
+
                     aux.Nombre = (string)accesoDatos.Lector["Nombre"];
+
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+
                     aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
 
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
-                    Marca marca = new Marca();
+                    
+                    aux.Marca = new Marca();
 
-                    aux.Marca = marca;
+                    aux.Marca.Descripcion = (string)accesoDatos.Lector["Marca"];
 
-                    Categoria categoria = new Categoria();
-                    aux.Categoria = categoria;  
+                    aux.Categoria = new Categoria();
 
-
+                    aux.Categoria.Descripcion = (string)accesoDatos.Lector["Categoria"] ;  
 
                     articulos.Add(aux);
 
@@ -68,5 +72,51 @@ namespace Negocio
             }
         
         }
+
+        public  void ArticuloAdd( Articulo Nuevo)
+        {
+
+            AccesoDatos  accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setConsutar("insert into articulos(Codigo,Nombre,Descripcion,IdMarca,IdCategoria,ImagenUrl,Precio)values(@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@ImagenUrl,@Precio)");
+                accesoDatos.setearParametro("@Codigo",Nuevo.Codigo);
+                accesoDatos.setearParametro("@Nombre", Nuevo.Nombre);
+                accesoDatos.setearParametro("@Descripcion", Nuevo.Descripcion);
+                accesoDatos.setearParametro("@IdMarca", Nuevo.Marca.Id);
+                accesoDatos.setearParametro("@IdCategoria", Nuevo.Categoria.Id);
+                accesoDatos.setearParametro("@ImagenUrl", Nuevo.ImagenUrl);
+                accesoDatos.setearParametro("@Precio", Nuevo.Precio);
+
+
+                accesoDatos.ejecutarAccion();
+            
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally 
+            {
+                accesoDatos.CerrarConection();
+
+            }
+        
+        }
+
+        public void ArticuloModify()
+        { 
+        
+        
+        }
+
+        public void ArticuloDelete()
+        { 
+        
+        
+        }
+    
     }
 }

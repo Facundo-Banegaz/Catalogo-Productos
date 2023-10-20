@@ -42,5 +42,30 @@ namespace Negocio
                 accesoDatos.CerrarConection();
             }
         }
+
+
+        public void CategoriaAdd(Categoria Nuevo)
+        {
+
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setConsutar("insert into Categorias(Descripcion)values(@Descripcion);");
+                accesoDatos.setearParametro("@Descripcion",Nuevo.Descripcion);
+                accesoDatos.ejecutarAccion();
+
+            }
+            catch (Exception ex) 
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.CerrarConection();
+
+            }
+        }
     }
 }

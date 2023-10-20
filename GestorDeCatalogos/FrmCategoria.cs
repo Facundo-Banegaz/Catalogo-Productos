@@ -43,5 +43,25 @@ namespace GestorDeCatalogos
 
 
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            Categoria   categoria   = new Categoria();
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+
+            try
+            {
+                categoria.Descripcion = txt_decripcion.Text;
+                logicaCategoria.CategoriaAdd(categoria);
+
+                MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            } 
+
+        }
     }
 }

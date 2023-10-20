@@ -18,7 +18,7 @@ namespace Negocio
 
             try
             {
-                accesoDatos.setConsutar("select id, descripcion from categorias;");
+                accesoDatos.setConsutar("select id, descripcion from Marcas;");
                 accesoDatos.ejecutarLectura();
 
                 while (accesoDatos.Lector.Read())

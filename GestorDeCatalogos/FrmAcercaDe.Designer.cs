@@ -36,7 +36,7 @@
             this.lbl_title.AutoSize = true;
             this.lbl_title.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_title.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(410, 276);
+            this.lbl_title.Location = new System.Drawing.Point(662, 277);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(340, 35);
             this.lbl_title.TabIndex = 0;
