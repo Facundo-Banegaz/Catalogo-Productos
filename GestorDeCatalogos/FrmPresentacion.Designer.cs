@@ -49,7 +49,7 @@
             // 
             // btn_siguiente
             // 
-            this.btn_siguiente.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_siguiente.BackColor = System.Drawing.Color.SpringGreen;
             this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_siguiente.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_siguiente.Location = new System.Drawing.Point(267, 541);

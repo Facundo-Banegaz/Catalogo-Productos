@@ -36,28 +36,28 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.gbo_container = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel_filtro = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_detalle = new FontAwesome.Sharp.IconButton();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_suspender = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel_filtro = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.dgv_categorias = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.gbo_container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -68,7 +68,7 @@
             this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
-            this.panel_contenedor_articulo.Location = new System.Drawing.Point(7, -50);
+            this.panel_contenedor_articulo.Location = new System.Drawing.Point(7, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
             this.panel_contenedor_articulo.Size = new System.Drawing.Size(398, 830);
             this.panel_contenedor_articulo.TabIndex = 8;
@@ -81,7 +81,7 @@
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 25);
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(373, 311);
             this.groupBox1.TabIndex = 9;
@@ -151,98 +151,12 @@
             this.gbo_container.Controls.Add(this.btn_suspender);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(29, 366);
+            this.gbo_container.Location = new System.Drawing.Point(27, 403);
             this.gbo_container.Name = "gbo_container";
             this.gbo_container.Size = new System.Drawing.Size(323, 356);
             this.gbo_container.TabIndex = 64;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label16.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, -71);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(191, 35);
-            this.label16.TabIndex = 41;
-            this.label16.Text = "Detalle Articulo";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(499, 167);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1219, 467);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // panel_filtro
-            // 
-            this.panel_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_filtro.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_filtro.Controls.Add(this.groupBox2);
-            this.panel_filtro.Location = new System.Drawing.Point(411, -50);
-            this.panel_filtro.Name = "panel_filtro";
-            this.panel_filtro.Size = new System.Drawing.Size(1392, 149);
-            this.panel_filtro.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.iconButton2);
-            this.groupBox2.Controls.Add(this.iconButton3);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.iconButton1);
-            this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 62);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1370, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista de Categorias:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(436, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 37);
-            this.comboBox1.TabIndex = 66;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(286, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 29);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Buscar por:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(757, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 37);
-            this.textBox2.TabIndex = 65;
             // 
             // btn_detalle
             // 
@@ -264,6 +178,7 @@
             this.btn_detalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_detalle.UseVisualStyleBackColor = false;
+            this.btn_detalle.Click += new System.EventHandler(this.btn_detalle_Click);
             // 
             // btn_editar
             // 
@@ -349,6 +264,48 @@
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = false;
             // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label16.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(30, -71);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(191, 35);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Detalle Articulo";
+            // 
+            // panel_filtro
+            // 
+            this.panel_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_filtro.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_filtro.Controls.Add(this.groupBox2);
+            this.panel_filtro.Location = new System.Drawing.Point(425, 12);
+            this.panel_filtro.Name = "panel_filtro";
+            this.panel_filtro.Size = new System.Drawing.Size(1373, 149);
+            this.panel_filtro.TabIndex = 6;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.iconButton2);
+            this.groupBox2.Controls.Add(this.iconButton3);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.iconButton1);
+            this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(22, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1332, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lista de Categorias:";
+            // 
             // iconButton2
             // 
             this.iconButton2.BackColor = System.Drawing.Color.LimeGreen;
@@ -380,7 +337,7 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(1206, 31);
+            this.iconButton3.Location = new System.Drawing.Point(1168, 31);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(149, 46);
             this.iconButton3.TabIndex = 69;
@@ -388,6 +345,37 @@
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(398, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(289, 37);
+            this.comboBox1.TabIndex = 66;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(267, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 29);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Buscar por:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(719, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(267, 37);
+            this.textBox2.TabIndex = 65;
             // 
             // iconButton1
             // 
@@ -400,7 +388,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(1030, 31);
+            this.iconButton1.Location = new System.Drawing.Point(992, 31);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(158, 46);
             this.iconButton1.TabIndex = 64;
@@ -409,28 +397,43 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // dgv_categorias
+            // 
+            this.dgv_categorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categorias.Location = new System.Drawing.Point(515, 212);
+            this.dgv_categorias.Name = "dgv_categorias";
+            this.dgv_categorias.RowHeadersWidth = 62;
+            this.dgv_categorias.RowTemplate.Height = 28;
+            this.dgv_categorias.Size = new System.Drawing.Size(1219, 467);
+            this.dgv_categorias.TabIndex = 9;
+            this.dgv_categorias.SelectionChanged += new System.EventHandler(this.dgv_categorias_SelectionChanged);
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1810, 730);
+            this.Controls.Add(this.dgv_categorias);
             this.Controls.Add(this.panel_contenedor_articulo);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel_filtro);
             this.Name = "FrmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCategoria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.gbo_container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +454,6 @@
         private FontAwesome.Sharp.IconButton btn_suspender;
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox groupBox2;
         private FontAwesome.Sharp.IconButton iconButton2;
@@ -460,5 +462,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.DataGridView dgv_categorias;
     }
 }

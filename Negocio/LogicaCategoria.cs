@@ -14,15 +14,32 @@ namespace Negocio
         public List<Categoria>  CategoriaList()
         { 
             List<Categoria> categorias = new List<Categoria>();
+            AccesoDatos accesoDatos = new AccesoDatos();
+
             try
             {
+                accesoDatos.setConsutar("select id, descripcion from categorias;");
+                accesoDatos.ejecutarLectura();
 
+                while(accesoDatos.Lector.Read())
+                { 
+                    Categoria categoria = new Categoria();
+
+                    categoria.Id = (int)accesoDatos.Lector["Id"];
+                    categoria.Descripcion= (string)accesoDatos.Lector["Descripcion"];
+                    categorias.Add(categoria);
+                }
                 return categorias;
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+            finally
+            {
+
+                accesoDatos.CerrarConection();
             }
         }
     }

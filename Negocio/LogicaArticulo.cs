@@ -14,52 +14,45 @@ namespace Negocio
 
         public List<Articulo> ArticuloList()
         {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand comando = new SqlCommand();    
-            SqlDataReader lector;
 
-
-
-
+            AccesoDatos accesoDatos = new AccesoDatos();    
             List<Articulo> articulos = new List<Articulo>();
             
             try
             {
-                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB;  integrated security=true";
-
-                comando.CommandType= System.Data.CommandType.Text;
-
-                comando.CommandText = " select art.Id, Codigo, Nombre, art.Descripcion,ImagenUrl, Precio,cat.Descripcion as categoria,mar.Descripcion as Marca  from Articulos art,Categorias cat, Marcas mar  where art.IdCategoria= cat.Id and art.IdMarca = mar.Id";
 
 
+                accesoDatos.setConsutar("select art.Id, art.Codigo, art.Nombre, art.Descripcion,art.ImagenUrl, art.Precio,cat.Descripcion as categoria,mar.Descripcion as Marca  from ARTICULOS as art  join CATEGORIAS as cat  on art.IdCategoria= cat.Id join MARCAS as mar on art.IdMarca = mar.Id;");
+
+                accesoDatos.ejecutarLectura();
 
 
-                    //"select art.Id, art.Codigo, art.Nombre, art.Descripcion,art.ImagenUrl, art.Precio,cat.Descripcion as categoria,mar.Descripcion as Marca  from ARTICULOS as art  join CATEGORIAS as cat  on art.IdCategoria= cat.Id join MARCAS as mar on art.IdMarca = mar.Id;";
-
-                comando.Connection = connection;
-
-                connection.Open();
-
-                lector = comando.ExecuteReader();    
 
 
-                while (lector.Read())
+                while (accesoDatos.Lector.Read())
                 { 
                     Articulo aux = new Articulo();
 
 
-                    aux.id = (int)lector["Id"];
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Imagen = (string)lector["Imagen"];
+                    aux.id = (int)accesoDatos.Lector["Id"];
+                    aux.Codigo = (string)accesoDatos.Lector["Codigo"];
+                    aux.Nombre = (string)accesoDatos.Lector["Nombre"];
+                    aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
+                    aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
 
-                    aux.Precio = (decimal)lector["Precio"];
+                    aux.Precio = (decimal)accesoDatos.Lector["Precio"];
+                    Marca marca = new Marca();
+
+                    aux.Marca = marca;
+
+                    Categoria categoria = new Categoria();
+                    aux.Categoria = categoria;  
+
+
 
                     articulos.Add(aux);
 
                 }
-                
-                connection.Close();
 
                 return articulos;
             }
@@ -67,6 +60,11 @@ namespace Negocio
             {
 
                 throw ex;
+            }
+            finally
+            {
+
+                accesoDatos.CerrarConection();
             }
         
         }

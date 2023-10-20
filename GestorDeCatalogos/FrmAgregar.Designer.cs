@@ -53,7 +53,7 @@
             this.btn_suspender = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_articulos = new System.Windows.Forms.DataGridView();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -62,12 +62,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.pbx_img = new System.Windows.Forms.PictureBox();
             this.panel_contenedor_articulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbo_container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).BeginInit();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_img)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -431,18 +433,20 @@
             this.label16.TabIndex = 41;
             this.label16.Text = "Detalle Articulo";
             // 
-            // dataGridView1
+            // dgv_articulos
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(518, 265);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1219, 467);
-            this.dataGridView1.TabIndex = 1;
+            this.dgv_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_articulos.Location = new System.Drawing.Point(454, 265);
+            this.dgv_articulos.Name = "dgv_articulos";
+            this.dgv_articulos.RowHeadersWidth = 62;
+            this.dgv_articulos.RowTemplate.Height = 28;
+            this.dgv_articulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_articulos.Size = new System.Drawing.Size(267, 467);
+            this.dgv_articulos.TabIndex = 1;
+            this.dgv_articulos.SelectionChanged += new System.EventHandler(this.dgv_articulos_SelectionChanged);
             // 
             // panel_filtro
             // 
@@ -568,14 +572,27 @@
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // pbx_img
+            // 
+            this.pbx_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbx_img.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbx_img.Location = new System.Drawing.Point(1012, 265);
+            this.pbx_img.Name = "pbx_img";
+            this.pbx_img.Size = new System.Drawing.Size(783, 467);
+            this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_img.TabIndex = 3;
+            this.pbx_img.TabStop = false;
+            // 
             // FrmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1832, 786);
+            this.Controls.Add(this.pbx_img);
             this.Controls.Add(this.panel_filtro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_articulos);
             this.Controls.Add(this.panel_contenedor_articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(0, 188);
@@ -589,10 +606,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbo_container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).EndInit();
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_img)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,7 +619,7 @@
 
         private System.Windows.Forms.Panel panel_contenedor_articulo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_articulos;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox gbo_container;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -633,5 +651,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pbx_img;
     }
 }

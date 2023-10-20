@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -51,13 +50,14 @@
             this.btn_suspender = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
+            this.dgv_marcas = new System.Windows.Forms.DataGridView();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_contenedor_articulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.gbo_container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_filtro
@@ -180,19 +180,6 @@
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(494, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1219, 467);
-            this.dataGridView1.TabIndex = 4;
             // 
             // panel_contenedor_articulo
             // 
@@ -414,6 +401,20 @@
             this.label16.TabIndex = 41;
             this.label16.Text = "Detalle Articulo";
             // 
+            // dgv_marcas
+            // 
+            this.dgv_marcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_marcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_marcas.Location = new System.Drawing.Point(494, 229);
+            this.dgv_marcas.Name = "dgv_marcas";
+            this.dgv_marcas.RowHeadersWidth = 62;
+            this.dgv_marcas.RowTemplate.Height = 28;
+            this.dgv_marcas.Size = new System.Drawing.Size(1219, 467);
+            this.dgv_marcas.TabIndex = 4;
+            this.dgv_marcas.SelectionChanged += new System.EventHandler(this.dgv_marcas_SelectionChanged);
+            // 
             // FrmMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -421,22 +422,23 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1810, 730);
             this.Controls.Add(this.panel_contenedor_articulo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_marcas);
             this.Controls.Add(this.panel_filtro);
             this.Name = "FrmMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMarca";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMarca_Load);
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.gbo_container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +453,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel_contenedor_articulo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
@@ -466,5 +467,6 @@
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DataGridView dgv_marcas;
     }
 }

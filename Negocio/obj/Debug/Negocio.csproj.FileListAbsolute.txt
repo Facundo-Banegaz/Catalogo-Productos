@@ -1,2 +1,11 @@
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Negocio.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Negocio.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Datos.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Dominio.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Datos.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\bin\Debug\Dominio.pdb
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.dll
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\Negocio\obj\Debug\Negocio.pdb
