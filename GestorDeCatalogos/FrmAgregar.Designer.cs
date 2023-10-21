@@ -400,6 +400,7 @@
             this.dgv_articulos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgv_articulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgv_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_articulos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_articulos.Location = new System.Drawing.Point(460, 265);
             this.dgv_articulos.MultiSelect = false;

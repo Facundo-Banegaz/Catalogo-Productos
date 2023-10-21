@@ -322,7 +322,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_marcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_marcas.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgv_marcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_marcas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_marcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_marcas.Location = new System.Drawing.Point(494, 229);
             this.dgv_marcas.MultiSelect = false;

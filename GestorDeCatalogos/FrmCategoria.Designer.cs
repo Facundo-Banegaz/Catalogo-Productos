@@ -332,7 +332,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_categorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_categorias.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dgv_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categorias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_categorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_categorias.Location = new System.Drawing.Point(515, 212);
             this.dgv_categorias.MultiSelect = false;
