@@ -89,9 +89,9 @@ namespace GestorDeCatalogos
 
                 logicaArticulo.ArticuloAdd(articulo);
                 MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
-
+                
                 cargarGrilla();
-
+                limpiarCampos(gbx_campos);
             }
             catch (Exception ex)
             {
@@ -108,7 +108,15 @@ namespace GestorDeCatalogos
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void btn_suspender_Click(object sender, EventArgs e)
@@ -129,6 +137,23 @@ namespace GestorDeCatalogos
             cargarImg(seleccionado.ImagenUrl);
         }
 
+        private void limpiarCampos( Control control)
+        {
+            foreach (Control txt in control.Controls)
+            {
+                if(txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+                else if(txt is ComboBox)
+                {
+
+                    ((ComboBox)txt).SelectedItem = -1;
+                }
+                
+            }
+        
+        }
         private void cargarImg(string img)
         {
             try

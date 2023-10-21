@@ -32,7 +32,7 @@ namespace GestorDeCatalogos
 
                 MessageBox.Show("La Marca Fue Agregado Exitosamente!!");
                 cargarGrilla();
-
+                limpiarCampos(gbx_marcas);
             }
             catch (Exception ex)
             {
@@ -78,6 +78,18 @@ namespace GestorDeCatalogos
             listaMarcas = LogicaMarca.MarcaList();
 
             dgv_marcas.DataSource = listaMarcas;
+
+        }
+
+        private void limpiarCampos(Control control)
+        {
+            foreach (Control txt in control.Controls)
+            {
+                if (txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+            }
 
         }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbx_campos = new System.Windows.Forms.GroupBox();
             this.cbo_marca = new System.Windows.Forms.ComboBox();
             this.cbo_categoria = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
             this.panel_contenedor_articulo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbx_campos.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).BeginInit();
             this.panel_filtro.SuspendLayout();
@@ -74,7 +74,7 @@
             this.panel_contenedor_articulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
+            this.panel_contenedor_articulo.Controls.Add(this.gbx_campos);
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(0, 12);
@@ -82,29 +82,29 @@
             this.panel_contenedor_articulo.Size = new System.Drawing.Size(420, 830);
             this.panel_contenedor_articulo.TabIndex = 1;
             // 
-            // groupBox1
+            // gbx_campos
             // 
-            this.groupBox1.Controls.Add(this.cbo_marca);
-            this.groupBox1.Controls.Add(this.cbo_categoria);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.txt_nombre);
-            this.groupBox1.Controls.Add(this.txt_descripcion);
-            this.groupBox1.Controls.Add(this.txt_img);
-            this.groupBox1.Controls.Add(this.txt_precio);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.txt_codigo);
-            this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 689);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle de Articulos:";
+            this.gbx_campos.Controls.Add(this.cbo_marca);
+            this.gbx_campos.Controls.Add(this.cbo_categoria);
+            this.gbx_campos.Controls.Add(this.label9);
+            this.gbx_campos.Controls.Add(this.label10);
+            this.gbx_campos.Controls.Add(this.label11);
+            this.gbx_campos.Controls.Add(this.label12);
+            this.gbx_campos.Controls.Add(this.label13);
+            this.gbx_campos.Controls.Add(this.txt_nombre);
+            this.gbx_campos.Controls.Add(this.txt_descripcion);
+            this.gbx_campos.Controls.Add(this.txt_img);
+            this.gbx_campos.Controls.Add(this.txt_precio);
+            this.gbx_campos.Controls.Add(this.label14);
+            this.gbx_campos.Controls.Add(this.label15);
+            this.gbx_campos.Controls.Add(this.txt_codigo);
+            this.gbx_campos.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbx_campos.Location = new System.Drawing.Point(12, 12);
+            this.gbx_campos.Name = "gbx_campos";
+            this.gbx_campos.Size = new System.Drawing.Size(405, 689);
+            this.gbx_campos.TabIndex = 1;
+            this.gbx_campos.TabStop = false;
+            this.gbx_campos.Text = "Detalle de Articulos:";
             // 
             // cbo_marca
             // 
@@ -567,8 +567,8 @@
             this.Load += new System.EventHandler(this.FrmAgregar_Load);
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbx_campos.ResumeLayout(false);
+            this.gbx_campos.PerformLayout();
             this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).EndInit();
             this.panel_filtro.ResumeLayout(false);
@@ -586,7 +586,7 @@
         private System.Windows.Forms.DataGridView dgv_articulos;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox gbo_container;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbx_campos;
         private System.Windows.Forms.ComboBox cbo_marca;
         private System.Windows.Forms.ComboBox cbo_categoria;
         private System.Windows.Forms.Label label9;

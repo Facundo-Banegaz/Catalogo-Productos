@@ -48,6 +48,16 @@ namespace GestorDeCatalogos
 
             dgv_categorias.DataSource = listaCategoria;
 
+        }
+        private void limpiarCampos(Control control)
+        {
+            foreach (Control txt in control.Controls)
+            {
+                if (txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+            }
 
         }
 
@@ -64,7 +74,7 @@ namespace GestorDeCatalogos
 
                 MessageBox.Show("La Categoria Fue Agregado Exitosamente!!");
                 cargarGrilla();
-
+                limpiarCampos(gbx_categorias);
             }
             catch (Exception ex)
             {

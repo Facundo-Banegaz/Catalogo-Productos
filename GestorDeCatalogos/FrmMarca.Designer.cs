@@ -37,7 +37,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbx_marcas = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.gbo_container = new System.Windows.Forms.GroupBox();
@@ -49,7 +49,7 @@
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel_contenedor_articulo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbx_marcas.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).BeginInit();
             this.SuspendLayout();
@@ -180,7 +180,7 @@
             this.panel_contenedor_articulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
+            this.panel_contenedor_articulo.Controls.Add(this.gbx_marcas);
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(2, 12);
@@ -188,17 +188,17 @@
             this.panel_contenedor_articulo.Size = new System.Drawing.Size(398, 830);
             this.panel_contenedor_articulo.TabIndex = 5;
             // 
-            // groupBox1
+            // gbx_marcas
             // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txt_descripcion);
-            this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 25);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 331);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle de Marcas:";
+            this.gbx_marcas.Controls.Add(this.label12);
+            this.gbx_marcas.Controls.Add(this.txt_descripcion);
+            this.gbx_marcas.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbx_marcas.Location = new System.Drawing.Point(3, 25);
+            this.gbx_marcas.Name = "gbx_marcas";
+            this.gbx_marcas.Size = new System.Drawing.Size(378, 331);
+            this.gbx_marcas.TabIndex = 9;
+            this.gbx_marcas.TabStop = false;
+            this.gbx_marcas.Text = "Detalle de Marcas:";
             // 
             // label12
             // 
@@ -354,8 +354,8 @@
             this.groupBox2.PerformLayout();
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbx_marcas.ResumeLayout(false);
+            this.gbx_marcas.PerformLayout();
             this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).EndInit();
             this.ResumeLayout(false);
@@ -373,7 +373,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panel_contenedor_articulo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbx_marcas;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.GroupBox gbo_container;

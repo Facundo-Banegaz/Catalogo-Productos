@@ -33,7 +33,7 @@
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbx_categorias = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@
             this.dgv_categorias = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbx_categorias.SuspendLayout();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
@@ -61,7 +61,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
-            this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
+            this.panel_contenedor_articulo.Controls.Add(this.gbx_categorias);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(3, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
@@ -147,18 +147,18 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
             // 
-            // groupBox1
+            // gbx_categorias
             // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txt_descripcion);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 33);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 311);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle de Categorias:";
+            this.gbx_categorias.Controls.Add(this.label12);
+            this.gbx_categorias.Controls.Add(this.txt_descripcion);
+            this.gbx_categorias.Controls.Add(this.textBox7);
+            this.gbx_categorias.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbx_categorias.Location = new System.Drawing.Point(16, 33);
+            this.gbx_categorias.Name = "gbx_categorias";
+            this.gbx_categorias.Size = new System.Drawing.Size(383, 311);
+            this.gbx_categorias.TabIndex = 9;
+            this.gbx_categorias.TabStop = false;
+            this.gbx_categorias.Text = "Detalle de Categorias:";
             // 
             // label12
             // 
@@ -361,8 +361,8 @@
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
             this.gbo_container.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbx_categorias.ResumeLayout(false);
+            this.gbx_categorias.PerformLayout();
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -374,7 +374,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_contenedor_articulo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbx_categorias;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.TextBox textBox7;
