@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_decripcion = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.gbo_container = new System.Windows.Forms.GroupBox();
-            this.btn_detalle = new FontAwesome.Sharp.IconButton();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,8 +48,8 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgv_categorias = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.gbo_container.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
@@ -61,113 +60,44 @@
             this.panel_contenedor_articulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
+            this.panel_contenedor_articulo.Controls.Add(this.groupBox1);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
-            this.panel_contenedor_articulo.Location = new System.Drawing.Point(7, 12);
+            this.panel_contenedor_articulo.Location = new System.Drawing.Point(3, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
-            this.panel_contenedor_articulo.Size = new System.Drawing.Size(398, 830);
+            this.panel_contenedor_articulo.Size = new System.Drawing.Size(416, 830);
             this.panel_contenedor_articulo.TabIndex = 8;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.txt_decripcion);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 33);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 311);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalle de Categorias:";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 22);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "Nombre de la Categoria:";
-            // 
-            // txt_decripcion
-            // 
-            this.txt_decripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_decripcion.Location = new System.Drawing.Point(6, 115);
-            this.txt_decripcion.Multiline = true;
-            this.txt_decripcion.Name = "txt_decripcion";
-            this.txt_decripcion.Size = new System.Drawing.Size(358, 190);
-            this.txt_decripcion.TabIndex = 71;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(26, 155);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(338, 150);
-            this.textBox7.TabIndex = 70;
             // 
             // gbo_container
             // 
             this.gbo_container.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbo_container.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.gbo_container.Controls.Add(this.btn_detalle);
             this.gbo_container.Controls.Add(this.btn_editar);
             this.gbo_container.Controls.Add(this.btn_eliminar);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(42, 350);
+            this.gbo_container.Location = new System.Drawing.Point(25, 371);
             this.gbo_container.Name = "gbo_container";
-            this.gbo_container.Size = new System.Drawing.Size(323, 356);
-            this.gbo_container.TabIndex = 64;
+            this.gbo_container.Size = new System.Drawing.Size(365, 356);
+            this.gbo_container.TabIndex = 65;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
-            // 
-            // btn_detalle
-            // 
-            this.btn_detalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_detalle.BackColor = System.Drawing.Color.Black;
-            this.btn_detalle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_detalle.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_detalle.ForeColor = System.Drawing.Color.White;
-            this.btn_detalle.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_detalle.IconColor = System.Drawing.Color.White;
-            this.btn_detalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_detalle.IconSize = 40;
-            this.btn_detalle.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_detalle.Location = new System.Drawing.Point(16, 128);
-            this.btn_detalle.Name = "btn_detalle";
-            this.btn_detalle.Size = new System.Drawing.Size(291, 50);
-            this.btn_detalle.TabIndex = 25;
-            this.btn_detalle.Text = "Ver Detalle";
-            this.btn_detalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_detalle.UseVisualStyleBackColor = false;
-            this.btn_detalle.Click += new System.EventHandler(this.btn_detalle_Click);
             // 
             // btn_editar
             // 
             this.btn_editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_editar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_editar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.Color.White;
             this.btn_editar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btn_editar.IconColor = System.Drawing.Color.White;
             this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_editar.IconSize = 40;
+            this.btn_editar.IconSize = 50;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.Location = new System.Drawing.Point(16, 194);
+            this.btn_editar.Location = new System.Drawing.Point(16, 156);
             this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(291, 50);
+            this.btn_editar.Size = new System.Drawing.Size(333, 70);
             this.btn_editar.TabIndex = 29;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -179,16 +109,16 @@
             this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_eliminar.BackColor = System.Drawing.Color.Crimson;
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.btn_eliminar.IconColor = System.Drawing.Color.White;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 40;
+            this.btn_eliminar.IconSize = 50;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_eliminar.Location = new System.Drawing.Point(16, 267);
+            this.btn_eliminar.Location = new System.Drawing.Point(16, 252);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(291, 50);
+            this.btn_eliminar.Size = new System.Drawing.Size(333, 70);
             this.btn_eliminar.TabIndex = 28;
             this.btn_eliminar.Text = "Eminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,22 +130,68 @@
             this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_guardar.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_guardar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
             this.btn_guardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btn_guardar.IconColor = System.Drawing.Color.White;
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_guardar.IconSize = 40;
+            this.btn_guardar.IconSize = 50;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(16, 57);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 51);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(291, 50);
+            this.btn_guardar.Size = new System.Drawing.Size(333, 70);
             this.btn_guardar.TabIndex = 27;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = false;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txt_descripcion);
+            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(16, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(383, 311);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Detalle de Categorias:";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(16, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(182, 22);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "Nombre de la Categoria:";
+            // 
+            // txt_descripcion
+            // 
+            this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_descripcion.Location = new System.Drawing.Point(16, 115);
+            this.txt_descripcion.Multiline = true;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(358, 190);
+            this.txt_descripcion.TabIndex = 71;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Location = new System.Drawing.Point(36, 155);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(338, 150);
+            this.textBox7.TabIndex = 70;
             // 
             // label16
             // 
@@ -223,7 +199,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label16.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, -71);
+            this.label16.Location = new System.Drawing.Point(48, -71);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(191, 35);
             this.label16.TabIndex = 41;
@@ -355,8 +331,11 @@
             this.dgv_categorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_categorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_categorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_categorias.Location = new System.Drawing.Point(515, 212);
+            this.dgv_categorias.MultiSelect = false;
             this.dgv_categorias.Name = "dgv_categorias";
             this.dgv_categorias.RowHeadersWidth = 62;
             this.dgv_categorias.RowTemplate.Height = 28;
@@ -379,9 +358,9 @@
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
+            this.gbo_container.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.gbo_container.ResumeLayout(false);
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -395,13 +374,8 @@
         private System.Windows.Forms.Panel panel_contenedor_articulo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_decripcion;
+        private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.GroupBox gbo_container;
-        private FontAwesome.Sharp.IconButton btn_detalle;
-        private FontAwesome.Sharp.IconButton btn_editar;
-        private FontAwesome.Sharp.IconButton btn_eliminar;
-        private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -412,5 +386,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.DataGridView dgv_categorias;
+        private System.Windows.Forms.GroupBox gbo_container;
+        private FontAwesome.Sharp.IconButton btn_editar;
+        private FontAwesome.Sharp.IconButton btn_eliminar;
+        private FontAwesome.Sharp.IconButton btn_guardar;
     }
 }

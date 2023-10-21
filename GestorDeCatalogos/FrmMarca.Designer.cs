@@ -38,16 +38,11 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.gbo_container = new System.Windows.Forms.GroupBox();
-            this.btn_detalle = new FontAwesome.Sharp.IconButton();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
-            this.btn_suspender = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
             this.dgv_marcas = new System.Windows.Forms.DataGridView();
@@ -55,7 +50,6 @@
             this.groupBox2.SuspendLayout();
             this.panel_contenedor_articulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).BeginInit();
             this.SuspendLayout();
@@ -196,25 +190,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.txt_descripcion);
             this.groupBox1.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 311);
+            this.groupBox1.Size = new System.Drawing.Size(378, 331);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Marcas:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(26, 68);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(338, 32);
-            this.numericUpDown1.TabIndex = 74;
             // 
             // label12
             // 
@@ -223,99 +207,52 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(7, 130);
+            this.label12.Location = new System.Drawing.Point(11, 78);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 22);
+            this.label12.Size = new System.Drawing.Size(157, 22);
             this.label12.TabIndex = 73;
-            this.label12.Text = "Descripción:";
+            this.label12.Text = "Nombre de la Marca:";
             // 
-            // textBox1
+            // txt_descripcion
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(26, 155);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 150);
-            this.textBox1.TabIndex = 71;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(26, 155);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(338, 150);
-            this.textBox7.TabIndex = 70;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label15.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 37);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 22);
-            this.label15.TabIndex = 65;
-            this.label15.Text = "Nro Codigo:";
+            this.txt_descripcion.Location = new System.Drawing.Point(26, 120);
+            this.txt_descripcion.Multiline = true;
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(338, 186);
+            this.txt_descripcion.TabIndex = 71;
             // 
             // gbo_container
             // 
             this.gbo_container.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gbo_container.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.gbo_container.Controls.Add(this.btn_detalle);
             this.gbo_container.Controls.Add(this.btn_editar);
             this.gbo_container.Controls.Add(this.btn_eliminar);
-            this.gbo_container.Controls.Add(this.btn_suspender);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(29, 366);
+            this.gbo_container.Location = new System.Drawing.Point(18, 381);
             this.gbo_container.Name = "gbo_container";
-            this.gbo_container.Size = new System.Drawing.Size(323, 356);
+            this.gbo_container.Size = new System.Drawing.Size(349, 356);
             this.gbo_container.TabIndex = 64;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
-            // 
-            // btn_detalle
-            // 
-            this.btn_detalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_detalle.BackColor = System.Drawing.Color.Black;
-            this.btn_detalle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_detalle.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_detalle.ForeColor = System.Drawing.Color.White;
-            this.btn_detalle.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_detalle.IconColor = System.Drawing.Color.White;
-            this.btn_detalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_detalle.IconSize = 40;
-            this.btn_detalle.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_detalle.Location = new System.Drawing.Point(16, 122);
-            this.btn_detalle.Name = "btn_detalle";
-            this.btn_detalle.Size = new System.Drawing.Size(291, 50);
-            this.btn_detalle.TabIndex = 25;
-            this.btn_detalle.Text = "Ver Detalle";
-            this.btn_detalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_detalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_detalle.UseVisualStyleBackColor = false;
-            this.btn_detalle.Click += new System.EventHandler(this.btn_detalle_Click);
             // 
             // btn_editar
             // 
             this.btn_editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_editar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_editar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.Color.White;
             this.btn_editar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.btn_editar.IconColor = System.Drawing.Color.White;
             this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_editar.IconSize = 40;
+            this.btn_editar.IconSize = 50;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.Location = new System.Drawing.Point(16, 178);
+            this.btn_editar.Location = new System.Drawing.Point(16, 156);
             this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(291, 50);
+            this.btn_editar.Size = new System.Drawing.Size(317, 70);
             this.btn_editar.TabIndex = 29;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -328,16 +265,16 @@
             this.btn_eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_eliminar.BackColor = System.Drawing.Color.Crimson;
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.btn_eliminar.IconColor = System.Drawing.Color.White;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 40;
+            this.btn_eliminar.IconSize = 50;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_eliminar.Location = new System.Drawing.Point(16, 290);
+            this.btn_eliminar.Location = new System.Drawing.Point(16, 252);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(291, 50);
+            this.btn_eliminar.Size = new System.Drawing.Size(317, 70);
             this.btn_eliminar.TabIndex = 28;
             this.btn_eliminar.Text = "Eminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -345,43 +282,21 @@
             this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // btn_suspender
-            // 
-            this.btn_suspender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_suspender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_suspender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_suspender.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suspender.ForeColor = System.Drawing.Color.White;
-            this.btn_suspender.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            this.btn_suspender.IconColor = System.Drawing.Color.White;
-            this.btn_suspender.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_suspender.IconSize = 40;
-            this.btn_suspender.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_suspender.Location = new System.Drawing.Point(16, 234);
-            this.btn_suspender.Name = "btn_suspender";
-            this.btn_suspender.Size = new System.Drawing.Size(291, 50);
-            this.btn_suspender.TabIndex = 26;
-            this.btn_suspender.Text = "Suspender";
-            this.btn_suspender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_suspender.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_suspender.UseVisualStyleBackColor = false;
-            this.btn_suspender.Click += new System.EventHandler(this.btn_suspender_Click);
-            // 
             // btn_guardar
             // 
             this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_guardar.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_guardar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
             this.btn_guardar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btn_guardar.IconColor = System.Drawing.Color.White;
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_guardar.IconSize = 40;
+            this.btn_guardar.IconSize = 50;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(16, 57);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 51);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(291, 50);
+            this.btn_guardar.Size = new System.Drawing.Size(317, 70);
             this.btn_guardar.TabIndex = 27;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -406,8 +321,11 @@
             this.dgv_marcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_marcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_marcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_marcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_marcas.Location = new System.Drawing.Point(494, 229);
+            this.dgv_marcas.MultiSelect = false;
             this.dgv_marcas.Name = "dgv_marcas";
             this.dgv_marcas.RowHeadersWidth = 62;
             this.dgv_marcas.RowTemplate.Height = 28;
@@ -436,7 +354,6 @@
             this.panel_contenedor_articulo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).EndInit();
             this.ResumeLayout(false);
@@ -456,17 +373,12 @@
         private System.Windows.Forms.Panel panel_contenedor_articulo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.GroupBox gbo_container;
-        private FontAwesome.Sharp.IconButton btn_detalle;
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
-        private FontAwesome.Sharp.IconButton btn_suspender;
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.DataGridView dgv_marcas;
     }
 }

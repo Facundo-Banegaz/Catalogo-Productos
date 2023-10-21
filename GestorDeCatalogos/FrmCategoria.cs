@@ -35,6 +35,13 @@ namespace GestorDeCatalogos
 
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
+            cargarGrilla();
+
+        }
+
+        private void cargarGrilla()
+        {
+
             LogicaCategoria logicaCategoria = new LogicaCategoria();
 
             listaCategoria = logicaCategoria.CategoriaList();
@@ -44,24 +51,26 @@ namespace GestorDeCatalogos
 
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void btn_guardar_Click_1(object sender, EventArgs e)
         {
-            Categoria   categoria   = new Categoria();
+            Categoria categoria = new Categoria();
             LogicaCategoria logicaCategoria = new LogicaCategoria();
 
             try
             {
-                categoria.Descripcion = txt_decripcion.Text;
+                categoria.Descripcion = txt_descripcion.Text;
+
                 logicaCategoria.CategoriaAdd(categoria);
 
-                MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+                MessageBox.Show("La Categoria Fue Agregado Exitosamente!!");
+                cargarGrilla();
+
             }
             catch (Exception ex)
             {
 
                 throw ex;
-            } 
-
+            }
         }
     }
 }

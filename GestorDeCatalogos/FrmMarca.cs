@@ -22,7 +22,23 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            Marca marca = new Marca();   
+            LogicaMarca logicaMarca = new LogicaMarca();    
 
+            try
+            {
+                marca.Descripcion = txt_descripcion.Text;
+                logicaMarca.MarcaAdd(marca);
+
+                MessageBox.Show("La Marca Fue Agregado Exitosamente!!");
+                cargarGrilla();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void btn_detalle_Click(object sender, EventArgs e)
@@ -53,11 +69,16 @@ namespace GestorDeCatalogos
 
         private void FrmMarca_Load(object sender, EventArgs e)
         {
+            cargarGrilla();
+        }
+        private void cargarGrilla()
+        {
             LogicaMarca LogicaMarca = new LogicaMarca();
 
             listaMarcas = LogicaMarca.MarcaList();
 
             dgv_marcas.DataSource = listaMarcas;
+
         }
     }
 }

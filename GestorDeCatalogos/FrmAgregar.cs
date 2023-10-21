@@ -26,6 +26,12 @@ namespace GestorDeCatalogos
 
         private void FrmAgregar_Load(object sender, EventArgs e)
         {
+            cargarGrilla();
+        }
+
+        private void cargarGrilla()
+        {
+
 
             //logica del dataGridView
             LogicaArticulo logicaArticulo = new LogicaArticulo();
@@ -34,14 +40,14 @@ namespace GestorDeCatalogos
 
             dgv_articulos.DataSource = listaArticulos;
 
-            //dgv_articulos.Columns["ImagenUrl"].Visible = false;
-            //dgv_articulos.Columns["Id"].Visible = false;
+            dgv_articulos.Columns["ImagenUrl"].Visible = false;
+            dgv_articulos.Columns["Descripcion"].Visible = false;
 
             cargarImg(listaArticulos[0].ImagenUrl);
 
             //logica del comboBox
-            LogicaCategoria logicaCategoria  = new LogicaCategoria();
-            LogicaMarca logicaMarca = new LogicaMarca();    
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+            LogicaMarca logicaMarca = new LogicaMarca();
 
             try
             {
@@ -56,12 +62,7 @@ namespace GestorDeCatalogos
                 MessageBox.Show(ex.ToString());
             }
 
-
-
-
-
         }
-
         private void panel_filtro_Paint(object sender, PaintEventArgs e)
         {
 
@@ -88,6 +89,8 @@ namespace GestorDeCatalogos
 
                 logicaArticulo.ArticuloAdd(articulo);
                 MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+
+                cargarGrilla();
 
             }
             catch (Exception ex)
@@ -137,6 +140,11 @@ namespace GestorDeCatalogos
 
                 pbx_img.Load("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081");
             }
+        }
+
+        private void txt_img_Leave(object sender, EventArgs e)
+        {
+            cargarImg(txt_img.Text);
         }
     }
 }

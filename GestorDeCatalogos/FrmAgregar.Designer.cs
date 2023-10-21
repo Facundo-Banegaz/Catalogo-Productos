@@ -48,7 +48,6 @@
             this.btn_detalle = new FontAwesome.Sharp.IconButton();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
-            this.btn_suspender = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
             this.dgv_articulos = new System.Windows.Forms.DataGridView();
@@ -103,7 +102,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 689);
-            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Articulos:";
             // 
@@ -118,7 +117,7 @@
             this.cbo_marca.Location = new System.Drawing.Point(36, 566);
             this.cbo_marca.Name = "cbo_marca";
             this.cbo_marca.Size = new System.Drawing.Size(338, 37);
-            this.cbo_marca.TabIndex = 79;
+            this.cbo_marca.TabIndex = 6;
             // 
             // cbo_categoria
             // 
@@ -131,7 +130,7 @@
             this.cbo_categoria.Location = new System.Drawing.Point(36, 640);
             this.cbo_categoria.Name = "cbo_categoria";
             this.cbo_categoria.Size = new System.Drawing.Size(338, 37);
-            this.cbo_categoria.TabIndex = 78;
+            this.cbo_categoria.TabIndex = 7;
             // 
             // label9
             // 
@@ -206,7 +205,7 @@
             this.txt_nombre.Location = new System.Drawing.Point(36, 128);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(338, 32);
-            this.txt_nombre.TabIndex = 71;
+            this.txt_nombre.TabIndex = 2;
             // 
             // txt_descripcion
             // 
@@ -217,7 +216,7 @@
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(338, 170);
-            this.txt_descripcion.TabIndex = 70;
+            this.txt_descripcion.TabIndex = 3;
             // 
             // txt_img
             // 
@@ -227,7 +226,8 @@
             this.txt_img.Location = new System.Drawing.Point(36, 410);
             this.txt_img.Name = "txt_img";
             this.txt_img.Size = new System.Drawing.Size(338, 32);
-            this.txt_img.TabIndex = 68;
+            this.txt_img.TabIndex = 4;
+            this.txt_img.Leave += new System.EventHandler(this.txt_img_Leave);
             // 
             // txt_precio
             // 
@@ -237,7 +237,7 @@
             this.txt_precio.Location = new System.Drawing.Point(36, 490);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(338, 32);
-            this.txt_precio.TabIndex = 67;
+            this.txt_precio.TabIndex = 5;
             // 
             // label14
             // 
@@ -262,7 +262,7 @@
             this.label15.Location = new System.Drawing.Point(13, 25);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(93, 22);
-            this.label15.TabIndex = 65;
+            this.label15.TabIndex = 1;
             this.label15.Text = "Nro Codigo:";
             // 
             // txt_codigo
@@ -273,7 +273,7 @@
             this.txt_codigo.Location = new System.Drawing.Point(36, 58);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(338, 32);
-            this.txt_codigo.TabIndex = 64;
+            this.txt_codigo.TabIndex = 2;
             // 
             // gbo_container
             // 
@@ -282,13 +282,12 @@
             this.gbo_container.Controls.Add(this.btn_detalle);
             this.gbo_container.Controls.Add(this.btn_editar);
             this.gbo_container.Controls.Add(this.btn_eliminar);
-            this.gbo_container.Controls.Add(this.btn_suspender);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(48, 707);
+            this.gbo_container.Location = new System.Drawing.Point(31, 717);
             this.gbo_container.Name = "gbo_container";
             this.gbo_container.Size = new System.Drawing.Size(323, 318);
-            this.gbo_container.TabIndex = 64;
+            this.gbo_container.TabIndex = 2;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
             // 
@@ -304,7 +303,7 @@
             this.btn_detalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_detalle.IconSize = 30;
             this.btn_detalle.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_detalle.Location = new System.Drawing.Point(16, 86);
+            this.btn_detalle.Location = new System.Drawing.Point(16, 110);
             this.btn_detalle.Name = "btn_detalle";
             this.btn_detalle.Size = new System.Drawing.Size(291, 45);
             this.btn_detalle.TabIndex = 25;
@@ -326,7 +325,7 @@
             this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_editar.IconSize = 30;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.Location = new System.Drawing.Point(16, 140);
+            this.btn_editar.Location = new System.Drawing.Point(16, 177);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(291, 45);
             this.btn_editar.TabIndex = 29;
@@ -358,28 +357,6 @@
             this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
-            // btn_suspender
-            // 
-            this.btn_suspender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_suspender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_suspender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_suspender.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suspender.ForeColor = System.Drawing.Color.White;
-            this.btn_suspender.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            this.btn_suspender.IconColor = System.Drawing.Color.White;
-            this.btn_suspender.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_suspender.IconSize = 30;
-            this.btn_suspender.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_suspender.Location = new System.Drawing.Point(16, 191);
-            this.btn_suspender.Name = "btn_suspender";
-            this.btn_suspender.Size = new System.Drawing.Size(291, 45);
-            this.btn_suspender.TabIndex = 26;
-            this.btn_suspender.Text = "Suspender";
-            this.btn_suspender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_suspender.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_suspender.UseVisualStyleBackColor = false;
-            this.btn_suspender.Click += new System.EventHandler(this.btn_suspender_Click);
-            // 
             // btn_guardar
             // 
             this.btn_guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -392,10 +369,10 @@
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_guardar.IconSize = 30;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(16, 31);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 48);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(291, 45);
-            this.btn_guardar.TabIndex = 27;
+            this.btn_guardar.TabIndex = 2;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -419,14 +396,19 @@
             this.dgv_articulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_articulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_articulos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dgv_articulos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgv_articulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_articulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_articulos.Location = new System.Drawing.Point(460, 265);
+            this.dgv_articulos.MultiSelect = false;
             this.dgv_articulos.Name = "dgv_articulos";
             this.dgv_articulos.RowHeadersWidth = 62;
             this.dgv_articulos.RowTemplate.Height = 28;
             this.dgv_articulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_articulos.Size = new System.Drawing.Size(368, 467);
-            this.dgv_articulos.TabIndex = 1;
+            this.dgv_articulos.Size = new System.Drawing.Size(523, 467);
+            this.dgv_articulos.TabIndex = 0;
             this.dgv_articulos.SelectionChanged += new System.EventHandler(this.dgv_articulos_SelectionChanged);
             // 
             // panel_filtro
@@ -557,11 +539,11 @@
             // 
             this.pbx_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbx_img.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbx_img.BackColor = System.Drawing.SystemColors.HighlightText;
             this.pbx_img.Location = new System.Drawing.Point(1012, 265);
             this.pbx_img.Name = "pbx_img";
             this.pbx_img.Size = new System.Drawing.Size(783, 467);
-            this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_img.TabIndex = 3;
             this.pbx_img.TabStop = false;
             // 
@@ -621,7 +603,6 @@
         private FontAwesome.Sharp.IconButton btn_detalle;
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
-        private FontAwesome.Sharp.IconButton btn_suspender;
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
         private FontAwesome.Sharp.IconButton iconButton2;

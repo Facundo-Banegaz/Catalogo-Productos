@@ -42,7 +42,9 @@ namespace Negocio
 
                     aux.Descripcion = (string)accesoDatos.Lector["Descripcion"];
 
-                    aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
+
+                    if (!(accesoDatos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
 
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
                     
