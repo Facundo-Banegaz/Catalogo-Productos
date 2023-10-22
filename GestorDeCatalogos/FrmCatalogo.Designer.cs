@@ -32,12 +32,12 @@
             this.menu_articulos = new FontAwesome.Sharp.IconMenuItem();
             this.menu_marcas = new FontAwesome.Sharp.IconMenuItem();
             this.menu_categoria = new FontAwesome.Sharp.IconMenuItem();
+            this.menu_consultar = new FontAwesome.Sharp.IconMenuItem();
             this.menu_acerca = new FontAwesome.Sharp.IconMenuItem();
             this.menu_title = new System.Windows.Forms.MenuStrip();
             this.menu_salir = new FontAwesome.Sharp.IconMenuItem();
             this.lbl_title = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
-            this.menu_consulta = new FontAwesome.Sharp.IconMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menu_title.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.menu_articulos,
             this.menu_marcas,
             this.menu_categoria,
-            this.menu_consulta,
+            this.menu_consultar,
             this.menu_acerca});
             this.menuStrip1.Location = new System.Drawing.Point(0, 100);
             this.menuStrip1.Name = "menuStrip1";
@@ -105,6 +105,21 @@
             this.menu_categoria.Text = "Categoria";
             this.menu_categoria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menu_categoria.Click += new System.EventHandler(this.menu_categoria_Click);
+            // 
+            // menu_consultar
+            // 
+            this.menu_consultar.AutoSize = false;
+            this.menu_consultar.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_consultar.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
+            this.menu_consultar.IconColor = System.Drawing.Color.Black;
+            this.menu_consultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menu_consultar.IconSize = 62;
+            this.menu_consultar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menu_consultar.Name = "menu_consultar";
+            this.menu_consultar.Size = new System.Drawing.Size(182, 80);
+            this.menu_consultar.Text = "Area De Consultas";
+            this.menu_consultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menu_consultar.Click += new System.EventHandler(this.menu_consultar_Click);
             // 
             // menu_acerca
             // 
@@ -175,21 +190,6 @@
             this.contenedor.Size = new System.Drawing.Size(1854, 842);
             this.contenedor.TabIndex = 3;
             // 
-            // menu_consulta
-            // 
-            this.menu_consulta.AutoSize = false;
-            this.menu_consulta.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_consulta.IconChar = FontAwesome.Sharp.IconChar.BookOpenReader;
-            this.menu_consulta.IconColor = System.Drawing.Color.Black;
-            this.menu_consulta.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menu_consulta.IconSize = 62;
-            this.menu_consulta.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menu_consulta.Name = "menu_consulta";
-            this.menu_consulta.Size = new System.Drawing.Size(182, 80);
-            this.menu_consulta.Text = "Area De Consultas";
-            this.menu_consulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menu_consulta.Click += new System.EventHandler(this.menu_consulta_Click);
-            // 
             // FrmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -228,6 +228,6 @@
         private FontAwesome.Sharp.IconMenuItem menu_acerca;
         private FontAwesome.Sharp.IconMenuItem menu_salir;
         private System.Windows.Forms.Panel contenedor;
-        private FontAwesome.Sharp.IconMenuItem menu_consulta;
+        private FontAwesome.Sharp.IconMenuItem menu_consultar;
     }
 }

@@ -78,7 +78,8 @@ namespace GestorDeCatalogos
             abrirForm((IconMenuItem)sender, new FrmAcercaDe());
         }
 
-        private void menu_consulta_Click(object sender, EventArgs e)
+
+        private void menu_consultar_Click(object sender, EventArgs e)
         {
             abrirForm((IconMenuItem)sender, new FrmConsultar());
         }

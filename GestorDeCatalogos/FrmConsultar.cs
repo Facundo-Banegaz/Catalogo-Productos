@@ -16,5 +16,10 @@ namespace GestorDeCatalogos
         {
             InitializeComponent();
         }
+
+        private void FrmConsultar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
