@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -46,12 +47,14 @@
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
             this.dgv_marcas = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbx_marcas.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_filtro
@@ -195,7 +198,7 @@
             this.gbx_marcas.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_marcas.Location = new System.Drawing.Point(3, 25);
             this.gbx_marcas.Name = "gbx_marcas";
-            this.gbx_marcas.Size = new System.Drawing.Size(378, 331);
+            this.gbx_marcas.Size = new System.Drawing.Size(382, 331);
             this.gbx_marcas.TabIndex = 9;
             this.gbx_marcas.TabStop = false;
             this.gbx_marcas.Text = "Detalle de Marcas:";
@@ -207,7 +210,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(11, 78);
+            this.label12.Location = new System.Drawing.Point(15, 78);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(157, 22);
             this.label12.TabIndex = 73;
@@ -217,10 +220,10 @@
             // 
             this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_descripcion.Location = new System.Drawing.Point(26, 120);
+            this.txt_descripcion.Location = new System.Drawing.Point(19, 125);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(338, 186);
+            this.txt_descripcion.Size = new System.Drawing.Size(329, 186);
             this.txt_descripcion.TabIndex = 71;
             // 
             // gbo_container
@@ -335,6 +338,10 @@
             this.dgv_marcas.TabIndex = 4;
             this.dgv_marcas.SelectionChanged += new System.EventHandler(this.dgv_marcas_SelectionChanged);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FrmMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -358,6 +365,7 @@
             this.gbx_marcas.PerformLayout();
             this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_marcas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +390,6 @@
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dgv_marcas;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

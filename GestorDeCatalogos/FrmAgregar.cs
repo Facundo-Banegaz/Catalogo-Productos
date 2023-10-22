@@ -22,7 +22,7 @@ namespace GestorDeCatalogos
             InitializeComponent();
         }
 
-   
+
 
         private void FrmAgregar_Load(object sender, EventArgs e)
         {
@@ -70,39 +70,12 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            Articulo articulo = new Articulo();
-            LogicaArticulo logicaArticulo = new LogicaArticulo();
-
-            try
-            {
-                articulo.Codigo = txt_codigo.Text ;
-                articulo.Nombre= txt_nombre.Text ;
-                articulo.Descripcion = txt_descripcion.Text;
-
-                articulo.Marca = (Marca)cbo_marca.SelectedItem;
-
-                articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
-
-                articulo.ImagenUrl = txt_img.Text;
-                articulo.Precio= int.Parse(txt_precio.Text);
-
-
-                logicaArticulo.ArticuloAdd(articulo);
-                MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
-                
-                cargarGrilla();
-                limpiarCampos(gbx_campos);
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            guadarArticulo();
         }
 
         private void btn_detalle_Click(object sender, EventArgs e)
         {
-            FrmDetalleArticulo frmDetalleArticulo = new FrmDetalleArticulo();   
+            FrmDetalleArticulo frmDetalleArticulo = new FrmDetalleArticulo();
             frmDetalleArticulo.ShowDialog();
         }
 
@@ -119,10 +92,7 @@ namespace GestorDeCatalogos
             }
         }
 
-        private void btn_suspender_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -137,22 +107,51 @@ namespace GestorDeCatalogos
             cargarImg(seleccionado.ImagenUrl);
         }
 
-        private void limpiarCampos( Control control)
+        private void guadarArticulo()
         {
-            foreach (Control txt in control.Controls)
-            {
-                if(txt is TextBox)
-                {
-                    ((TextBox)txt).Clear();
-                }
-                else if(txt is ComboBox)
-                {
+            Articulo articulo = new Articulo();
+            LogicaArticulo logicaArticulo = new LogicaArticulo();
 
-                    ((ComboBox)txt).SelectedItem = -1;
+            try
+            {
+
+                if (validarcampos())
+                {
+                    articulo.Codigo = txt_codigo.Text;
+                    articulo.Nombre = txt_nombre.Text;
+                    articulo.Descripcion = txt_descripcion.Text;
+
+                    articulo.Marca = (Marca)cbo_marca.SelectedItem;
+
+                    articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
+
+                    articulo.ImagenUrl = txt_img.Text;
+                    articulo.Precio =   decimal.Parse(txt_precio.Text);
+
+                    //validarcampos();
+
+                    logicaArticulo.ArticuloAdd(articulo);
+
+                    limpiarCamposProvider();
+                    limpiarCampos(gbx_campos);
+                    MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+
+                   
+
+                    cargarGrilla();
+
                 }
-                
+                else
+                {
+                    MessageBox.Show("Debe Completar Todos los Campos!!");
+                }
             }
-        
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
         private void cargarImg(string img)
         {
@@ -170,6 +169,74 @@ namespace GestorDeCatalogos
         private void txt_img_Leave(object sender, EventArgs e)
         {
             cargarImg(txt_img.Text);
+        }
+        private void limpiarCampos(Control control)
+        {
+            foreach (Control txt in control.Controls)
+            {
+                if (txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+                else if (txt is ComboBox)
+                {
+
+                    ((ComboBox)txt).SelectedItem = -1;
+                }
+
+            } 
+        }
+        
+        private void limpiarCamposProvider( )
+        {
+            errorProvider.SetError(txt_codigo, "");
+            errorProvider.SetError(txt_nombre, "");
+            errorProvider.SetError(txt_descripcion, "");
+            errorProvider.SetError(txt_img, "");
+            errorProvider.SetError(txt_precio, "");
+        }
+        private bool validarcampos()
+        {
+            bool ok = true;
+
+            if(txt_codigo.Text =="")
+            {
+
+                ok = false;
+                errorProvider.SetError(txt_codigo,"Ingresar Codigo");
+            }
+            if(txt_nombre.Text =="")
+            {
+                ok = false;
+                errorProvider.SetError(txt_nombre, "Ingresar Nombre");
+            }
+            if(txt_descripcion.Text=="")
+            {
+                ok= false;
+                errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
+            }
+            if(txt_img.Text=="")
+            {
+                ok = false;
+                errorProvider.SetError(txt_img, "Ingresar Url de Imagen");
+            }
+            if (txt_precio.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_precio, "Ingresar  Precio");
+            }
+
+            return ok;
+        }
+
+        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

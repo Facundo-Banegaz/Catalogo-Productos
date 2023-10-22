@@ -22,30 +22,10 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();   
-            LogicaMarca logicaMarca = new LogicaMarca();    
-
-            try
-            {
-                marca.Descripcion = txt_descripcion.Text;
-                logicaMarca.MarcaAdd(marca);
-
-                MessageBox.Show("La Marca Fue Agregado Exitosamente!!");
-                cargarGrilla();
-                limpiarCampos(gbx_marcas);
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            guadarMarca();
         }
 
-        private void btn_detalle_Click(object sender, EventArgs e)
-        {
-            FrmDetalle frmDetalle = new FrmDetalle();
-            frmDetalle.ShowDialog();
-        }
+
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
@@ -91,6 +71,50 @@ namespace GestorDeCatalogos
                 }
             }
 
+        }
+
+        private void guadarMarca()
+        {
+            if (validarcampos())
+            {
+                Marca marca = new Marca();
+                LogicaMarca logicaMarca = new LogicaMarca();
+
+                try
+                {
+                    marca.Descripcion = txt_descripcion.Text;
+                    logicaMarca.MarcaAdd(marca);
+
+                    MessageBox.Show("La Marca Fue Agregado Exitosamente!!");
+                    cargarGrilla();
+                    limpiarCamposProvider();
+                    limpiarCampos(gbx_marcas);
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Debe Completar Todos los Campos!!");
+            }
+        }
+
+        private void limpiarCamposProvider()
+        {
+            errorProvider.SetError(txt_descripcion, "");
+        }
+        private bool validarcampos()
+        {
+            bool ok = true;
+            if (txt_descripcion.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
+            }
+            return ok;
         }
     }
 }

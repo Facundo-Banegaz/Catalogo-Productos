@@ -27,12 +27,6 @@ namespace GestorDeCatalogos
           
         }
 
-        private void btn_detalle_Click(object sender, EventArgs e)
-        {
-            FrmDetalle frmDetalle = new FrmDetalle();
-            frmDetalle.ShowDialog();
-        }
-
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
             cargarGrilla();
@@ -49,6 +43,45 @@ namespace GestorDeCatalogos
             dgv_categorias.DataSource = listaCategoria;
 
         }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            guardarCategoria();
+        }
+
+        private void guardarCategoria()
+        {
+            if (validarcampos())
+            {
+                Categoria categoria = new Categoria();
+                LogicaCategoria logicaCategoria = new LogicaCategoria();
+
+                try
+                {
+                    categoria.Descripcion = txt_descripcion.Text;
+
+                    logicaCategoria.CategoriaAdd(categoria);
+
+                    MessageBox.Show("La Categoria Fue Agregado Exitosamente!!");
+
+                    cargarGrilla();
+
+                    limpiarCamposProvider();
+
+                    limpiarCampos(gbx_categorias);
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe Completar Todos los Campos!!");
+            }
+
+        }
         private void limpiarCampos(Control control)
         {
             foreach (Control txt in control.Controls)
@@ -61,26 +94,19 @@ namespace GestorDeCatalogos
 
         }
 
-        private void btn_guardar_Click_1(object sender, EventArgs e)
+        private void limpiarCamposProvider()
         {
-            Categoria categoria = new Categoria();
-            LogicaCategoria logicaCategoria = new LogicaCategoria();
-
-            try
+            errorProvider.SetError(txt_descripcion, "");
+        }
+        private bool validarcampos()
+        {
+            bool ok = true;
+            if (txt_descripcion.Text == "")
             {
-                categoria.Descripcion = txt_descripcion.Text;
-
-                logicaCategoria.CategoriaAdd(categoria);
-
-                MessageBox.Show("La Categoria Fue Agregado Exitosamente!!");
-                cargarGrilla();
-                limpiarCampos(gbx_categorias);
+                ok = false;
+                errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
             }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
+            return ok;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.gbo_container = new System.Windows.Forms.GroupBox();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
@@ -36,7 +37,6 @@
             this.gbx_categorias = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,12 +47,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgv_categorias = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
             this.gbx_categorias.SuspendLayout();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -151,11 +153,10 @@
             // 
             this.gbx_categorias.Controls.Add(this.label12);
             this.gbx_categorias.Controls.Add(this.txt_descripcion);
-            this.gbx_categorias.Controls.Add(this.textBox7);
             this.gbx_categorias.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_categorias.Location = new System.Drawing.Point(16, 33);
             this.gbx_categorias.Name = "gbx_categorias";
-            this.gbx_categorias.Size = new System.Drawing.Size(383, 311);
+            this.gbx_categorias.Size = new System.Drawing.Size(387, 313);
             this.gbx_categorias.TabIndex = 9;
             this.gbx_categorias.TabStop = false;
             this.gbx_categorias.Text = "Detalle de Categorias:";
@@ -167,7 +168,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 63);
+            this.label12.Location = new System.Drawing.Point(20, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(182, 22);
             this.label12.TabIndex = 73;
@@ -177,21 +178,11 @@
             // 
             this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_descripcion.Location = new System.Drawing.Point(16, 115);
+            this.txt_descripcion.Location = new System.Drawing.Point(24, 106);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(358, 190);
+            this.txt_descripcion.Size = new System.Drawing.Size(328, 177);
             this.txt_descripcion.TabIndex = 71;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(36, 155);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(338, 150);
-            this.textBox7.TabIndex = 70;
             // 
             // label16
             // 
@@ -345,6 +336,10 @@
             this.dgv_categorias.TabIndex = 9;
             this.dgv_categorias.SelectionChanged += new System.EventHandler(this.dgv_categorias_SelectionChanged);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -367,6 +362,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,7 +373,6 @@
         private System.Windows.Forms.GroupBox gbx_categorias;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_descripcion;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -392,5 +387,6 @@
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_guardar;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
