@@ -115,13 +115,10 @@ namespace GestorDeCatalogos
             try
             {
 
-
-
                 if (validarcampos())
                 {
 
-
-                    
+                   
                     
                         articulo.Codigo = txt_codigo.Text;
                         articulo.Nombre = txt_nombre.Text;
@@ -150,7 +147,7 @@ namespace GestorDeCatalogos
                 
                 else
                 {
-                    MessageBox.Show("Debe Completar Todos los Campos!!");
+                    MessageBox.Show("Debe Completar Todos los Campos!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -204,7 +201,9 @@ namespace GestorDeCatalogos
         }
         private bool validarcampos()
         {
+            
             bool ok = true;
+            string codigo= txt_codigo.Text;
 
             if(txt_codigo.Text =="")
             {

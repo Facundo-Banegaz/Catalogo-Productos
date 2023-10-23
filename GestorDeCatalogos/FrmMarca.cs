@@ -98,7 +98,7 @@ namespace GestorDeCatalogos
             }
             else 
             {
-                MessageBox.Show("Debe Completar Todos los Campos!!");
+                MessageBox.Show("Debe Completar Todos los Campos!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

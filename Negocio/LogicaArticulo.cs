@@ -114,20 +114,22 @@ namespace Negocio
         
 
         }
+
         public bool validarCodigo(string codigo)
         {
             List<Articulo> lista = new List<Articulo>();
-            AccesoDatos datos = new AccesoDatos();
+            AccesoDatos accesoDatos = new AccesoDatos();
 
             try
             {
-                datos.setConsutar("select Codigo from ARTICULOS");
-                datos.ejecutarLectura();
+                accesoDatos.setConsutar("select Codigo from ARTICULOS");
 
-                while (datos.Lector.Read())
+                accesoDatos.ejecutarLectura();
+
+                while (accesoDatos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Codigo = (string)accesoDatos.Lector["Codigo"];
 
                     lista.Add(aux);
                 }
@@ -149,15 +151,15 @@ namespace Negocio
             }
             finally
             {
-                datos.CerrarConection();
+                accesoDatos.CerrarConection();
             }
         }
 
             public void ArticuloDelete()
-            { 
-        
-        
-            }
+            {
+
+
+            } 
     
     }
 }
