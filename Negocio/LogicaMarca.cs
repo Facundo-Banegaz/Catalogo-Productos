@@ -68,5 +68,40 @@ namespace Negocio
 
             }
         }
-    }
+
+        public bool validarMarca(string marca)
+        {
+            List<Marca> lista = new List<Marca>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsutar("select Descripcion from MARCAS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Marca aux = new Marca();
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    lista.Add(aux);
+                }
+
+                for (int x = 0; x < lista.Count(); x++)
+                {
+                    string marcaExistente = lista[x].Descripcion;
+
+                    if (marcaExistente.ToUpper() == marca.ToUpper())
+                        return true;
+                }
+                return false;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { datos.CerrarConection(); }
+        }
 }

@@ -112,13 +112,52 @@ namespace Negocio
         { 
         
         
+
+        }
+        public bool validarCodigo(string codigo)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsutar("select Codigo from ARTICULOS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+
+                    lista.Add(aux);
+                }
+
+                for (int x = 0; x < lista.Count(); x++)
+                {
+                    string codigoExistente = lista[x].Codigo;
+
+                    if (codigoExistente.ToUpper() == codigo.ToUpper())
+                        return true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConection();
+            }
         }
 
-        public void ArticuloDelete()
-        { 
+            public void ArticuloDelete()
+            { 
         
         
-        }
+            }
     
     }
 }

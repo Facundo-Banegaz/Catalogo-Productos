@@ -51,7 +51,10 @@ namespace Negocio
 
             try
             {
+
+
                 accesoDatos.setConsutar("insert into Categorias(Descripcion)values(@Descripcion);");
+
                 accesoDatos.setearParametro("@Descripcion",Nuevo.Descripcion);
                 accesoDatos.ejecutarAccion();
 
@@ -65,6 +68,43 @@ namespace Negocio
             {
                 accesoDatos.CerrarConection();
 
+            }
+        }
+
+        public bool validarCategoria(string categoria)
+        {
+            List<Categoria> lista = new List<Categoria>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setConsutar("select Descripcion from CATEGORIAS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    lista.Add(aux);
+                }
+
+                for (int x = 0; x < lista.Count(); x++)
+                {
+                    string CatExistente = lista[x].Descripcion;
+
+                    if (CatExistente.ToUpper() == categoria.ToUpper())
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally {
+                datos.CerrarConection(); 
             }
         }
     }

@@ -115,32 +115,48 @@ namespace GestorDeCatalogos
             try
             {
 
+                string codigo = txt_codigo.Text;
+
                 if (validarcampos())
                 {
-                    articulo.Codigo = txt_codigo.Text;
-                    articulo.Nombre = txt_nombre.Text;
-                    articulo.Descripcion = txt_descripcion.Text;
 
-                    articulo.Marca = (Marca)cbo_marca.SelectedItem;
+                    if (codigo != txt_codigo.Text)
+                    {
+                        if (logicaArticulo.validarCodigo(articulo.Codigo))
+                        {
 
-                    articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
+                            MessageBox.Show("El código ingresado ya existe, ingrese uno nuevo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txt_codigo.Focus();
+                            return;
+                        }
+                    }
+                    
+                    
+                        articulo.Codigo = txt_codigo.Text;
+                        articulo.Nombre = txt_nombre.Text;
+                        articulo.Descripcion = txt_descripcion.Text;
 
-                    articulo.ImagenUrl = txt_img.Text;
-                    articulo.Precio =   decimal.Parse(txt_precio.Text);
+                        articulo.Marca = (Marca)cbo_marca.SelectedItem;
 
-                    //validarcampos();
+                        articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
 
-                    logicaArticulo.ArticuloAdd(articulo);
+                        articulo.ImagenUrl = txt_img.Text;
+                        articulo.Precio = decimal.Parse(txt_precio.Text);
 
-                    limpiarCamposProvider();
-                    limpiarCampos(gbx_campos);
-                    MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+                        //validarcampos();
 
-                   
+                        logicaArticulo.ArticuloAdd(articulo);
 
-                    cargarGrilla();
+                        limpiarCamposProvider();
+                        limpiarCampos(gbx_campos);
+                        MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
 
-                }
+
+
+                        cargarGrilla();
+                    }
+
+                
                 else
                 {
                     MessageBox.Show("Debe Completar Todos los Campos!!");
