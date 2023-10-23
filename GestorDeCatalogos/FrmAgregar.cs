@@ -115,21 +115,12 @@ namespace GestorDeCatalogos
             try
             {
 
-                string codigo = txt_codigo.Text;
+
 
                 if (validarcampos())
                 {
 
-                    if (codigo != txt_codigo.Text)
-                    {
-                        if (logicaArticulo.validarCodigo(articulo.Codigo))
-                        {
 
-                            MessageBox.Show("El código ingresado ya existe, ingrese uno nuevo ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            txt_codigo.Focus();
-                            return;
-                        }
-                    }
                     
                     
                         articulo.Codigo = txt_codigo.Text;
