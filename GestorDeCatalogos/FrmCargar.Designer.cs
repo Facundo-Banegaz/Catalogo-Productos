@@ -80,7 +80,7 @@
             this.gbx_campos.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_campos.Location = new System.Drawing.Point(12, 12);
             this.gbx_campos.Name = "gbx_campos";
-            this.gbx_campos.Size = new System.Drawing.Size(527, 689);
+            this.gbx_campos.Size = new System.Drawing.Size(527, 952);
             this.gbx_campos.TabIndex = 2;
             this.gbx_campos.TabStop = false;
             this.gbx_campos.Text = "Detalle de Articulos:";
@@ -93,7 +93,7 @@
             this.cbo_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_marca.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_marca.FormattingEnabled = true;
-            this.cbo_marca.Location = new System.Drawing.Point(19, 566);
+            this.cbo_marca.Location = new System.Drawing.Point(19, 779);
             this.cbo_marca.Name = "cbo_marca";
             this.cbo_marca.Size = new System.Drawing.Size(477, 37);
             this.cbo_marca.TabIndex = 6;
@@ -106,7 +106,7 @@
             this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_categoria.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_categoria.FormattingEnabled = true;
-            this.cbo_categoria.Location = new System.Drawing.Point(19, 640);
+            this.cbo_categoria.Location = new System.Drawing.Point(19, 884);
             this.cbo_categoria.Name = "cbo_categoria";
             this.cbo_categoria.Size = new System.Drawing.Size(477, 37);
             this.cbo_categoria.TabIndex = 7;
@@ -118,7 +118,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label9.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 372);
+            this.label9.Location = new System.Drawing.Point(15, 534);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 22);
             this.label9.TabIndex = 76;
@@ -131,7 +131,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label10.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 445);
+            this.label10.Location = new System.Drawing.Point(15, 639);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 22);
             this.label10.TabIndex = 75;
@@ -144,7 +144,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label11.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 525);
+            this.label11.Location = new System.Drawing.Point(24, 741);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 22);
             this.label11.TabIndex = 74;
@@ -157,7 +157,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 174);
+            this.label12.Location = new System.Drawing.Point(15, 284);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 22);
             this.label12.TabIndex = 73;
@@ -170,7 +170,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label13.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 95);
+            this.label13.Location = new System.Drawing.Point(15, 176);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 22);
             this.label13.TabIndex = 72;
@@ -181,7 +181,7 @@
             this.txt_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre.Location = new System.Drawing.Point(19, 128);
+            this.txt_nombre.Location = new System.Drawing.Point(19, 227);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(477, 32);
             this.txt_nombre.TabIndex = 2;
@@ -191,10 +191,10 @@
             this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_descripcion.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descripcion.Location = new System.Drawing.Point(19, 199);
+            this.txt_descripcion.Location = new System.Drawing.Point(19, 337);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(477, 170);
+            this.txt_descripcion.Size = new System.Drawing.Size(477, 165);
             this.txt_descripcion.TabIndex = 3;
             // 
             // txt_img
@@ -202,7 +202,7 @@
             this.txt_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_img.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_img.Location = new System.Drawing.Point(19, 410);
+            this.txt_img.Location = new System.Drawing.Point(19, 575);
             this.txt_img.Name = "txt_img";
             this.txt_img.Size = new System.Drawing.Size(477, 32);
             this.txt_img.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.txt_precio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_precio.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio.Location = new System.Drawing.Point(19, 490);
+            this.txt_precio.Location = new System.Drawing.Point(19, 685);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(477, 32);
             this.txt_precio.TabIndex = 5;
@@ -224,7 +224,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label14.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 606);
+            this.label14.Location = new System.Drawing.Point(15, 845);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(85, 22);
             this.label14.TabIndex = 66;
@@ -237,7 +237,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label15.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(24, 33);
+            this.label15.Location = new System.Drawing.Point(15, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(93, 22);
             this.label15.TabIndex = 1;
@@ -248,7 +248,7 @@
             this.txt_codigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_codigo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo.Location = new System.Drawing.Point(19, 58);
+            this.txt_codigo.Location = new System.Drawing.Point(19, 109);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(477, 32);
             this.txt_codigo.TabIndex = 2;
@@ -258,36 +258,36 @@
             this.pbx_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbx_img.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pbx_img.Location = new System.Drawing.Point(664, 107);
+            this.pbx_img.Location = new System.Drawing.Point(775, 76);
             this.pbx_img.Name = "pbx_img";
-            this.pbx_img.Size = new System.Drawing.Size(492, 425);
+            this.pbx_img.Size = new System.Drawing.Size(492, 484);
             this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_img.TabIndex = 4;
             this.pbx_img.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(664, 561);
+            this.button1.Location = new System.Drawing.Point(775, 587);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(492, 39);
+            this.button1.Size = new System.Drawing.Size(492, 75);
             this.button1.TabIndex = 5;
             this.button1.Text = "Subir Imagen Local";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(932, 650);
+            this.button2.Location = new System.Drawing.Point(1043, 882);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 39);
+            this.button2.Size = new System.Drawing.Size(224, 51);
             this.button2.TabIndex = 6;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(664, 650);
+            this.button3.Location = new System.Drawing.Point(775, 882);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 39);
+            this.button3.Size = new System.Drawing.Size(218, 51);
             this.button3.TabIndex = 7;
             this.button3.Text = "Aceptar";
             this.button3.UseVisualStyleBackColor = true;
@@ -296,15 +296,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 705);
+            this.ClientSize = new System.Drawing.Size(1338, 976);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pbx_img);
             this.Controls.Add(this.gbx_campos);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmCargar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCargar";
             this.gbx_campos.ResumeLayout(false);
             this.gbx_campos.PerformLayout();

@@ -46,68 +46,9 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click_1(object sender, EventArgs e)
         {
-            guardarCategoria();
+           FrmAgregarMarCat frmAgregarMarCat = new FrmAgregarMarCat();
+            frmAgregarMarCat.ShowDialog();  
         }
 
-        private void guardarCategoria()
-        {
-            if (validarcampos())
-            {
-                Categoria categoria = new Categoria();
-                LogicaCategoria logicaCategoria = new LogicaCategoria();
-
-                try
-                {
-                    categoria.Descripcion = txt_descripcion.Text;
-
-                    logicaCategoria.CategoriaAdd(categoria);
-
-                    MessageBox.Show("La Categoria Fue Agregado Exitosamente!!");
-
-                    cargarGrilla();
-
-                    limpiarCamposProvider();
-
-                    limpiarCampos(gbx_categorias);
-                }
-                catch (Exception ex)
-                {
-
-                    throw ex;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe Completar Todos los Campos!!"
-                    , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-        private void limpiarCampos(Control control)
-        {
-            foreach (Control txt in control.Controls)
-            {
-                if (txt is TextBox)
-                {
-                    ((TextBox)txt).Clear();
-                }
-            }
-
-        }
-
-        private void limpiarCamposProvider()
-        {
-            errorProvider.SetError(txt_descripcion, "");
-        }
-        private bool validarcampos()
-        {
-            bool ok = true;
-            if (txt_descripcion.Text == "")
-            {
-                ok = false;
-                errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
-            }
-            return ok;
-        }
     }
 }

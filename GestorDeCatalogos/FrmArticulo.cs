@@ -49,8 +49,8 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-           FrmArticulo frmArticulo = new FrmArticulo();
-            frmArticulo.ShowDialog();
+          FrmCargar frmCargar   = new FrmCargar();
+            frmCargar.ShowDialog();
         }
 
         private void btn_detalle_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace GestorDeCatalogos
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmArticulo frmEditar =  new FrmArticulo();
+            FrmCargar frmEditar = new FrmCargar();
             frmEditar.ShowDialog();
         }
 
@@ -95,10 +95,7 @@ namespace GestorDeCatalogos
             }
         }
 
-        private void txt_img_Leave(object sender, EventArgs e)
-        {
-            cargarImg(txt_img.Text);
-        }
+
 
 
 
