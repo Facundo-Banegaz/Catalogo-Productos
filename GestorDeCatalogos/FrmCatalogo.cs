@@ -59,7 +59,7 @@ namespace GestorDeCatalogos
         }
         private void menu_articulos_Click(object sender, EventArgs e)
         {
-            abrirForm((IconMenuItem)sender,new FrmAgregar());
+            abrirForm((IconMenuItem)sender,new FrmArticulo());
         }
 
         private void menu_marcas_Click(object sender, EventArgs e)

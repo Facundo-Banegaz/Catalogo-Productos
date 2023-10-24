@@ -59,11 +59,17 @@
     <Compile Include="FrmAcercaDe.Designer.cs">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregar.cs">
+    <Compile Include="FrmArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregar.Designer.cs">
-      <DependentUpon>FrmAgregar.cs</DependentUpon>
+    <Compile Include="FrmArticulo.Designer.cs">
+      <DependentUpon>FrmArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCargar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargar.Designer.cs">
+      <DependentUpon>FrmCargar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCatalogo.cs">
       <SubType>Form</SubType>
@@ -106,8 +112,11 @@
     <EmbeddedResource Include="FrmAcercaDe.resx">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregar.resx">
-      <DependentUpon>FrmAgregar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmArticulo.resx">
+      <DependentUpon>FrmArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCargar.resx">
+      <DependentUpon>FrmCargar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCatalogo.resx">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>

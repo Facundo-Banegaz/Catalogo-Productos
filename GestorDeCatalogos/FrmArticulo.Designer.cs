@@ -1,6 +1,6 @@
 ﻿namespace GestorDeCatalogos
 {
-    partial class FrmAgregar
+    partial class FrmArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,20 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
-            this.gbx_campos = new System.Windows.Forms.GroupBox();
-            this.cbo_marca = new System.Windows.Forms.ComboBox();
-            this.cbo_categoria = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.txt_descripcion = new System.Windows.Forms.TextBox();
-            this.txt_img = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_codigo = new System.Windows.Forms.TextBox();
             this.gbo_container = new System.Windows.Forms.GroupBox();
             this.btn_detalle = new FontAwesome.Sharp.IconButton();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
@@ -61,9 +47,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_precio = new System.Windows.Forms.TextBox();
             this.panel_contenedor_articulo.SuspendLayout();
-            this.gbx_campos.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).BeginInit();
             this.panel_filtro.SuspendLayout();
@@ -77,196 +61,12 @@
             this.panel_contenedor_articulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_contenedor_articulo.Controls.Add(this.gbx_campos);
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(0, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
             this.panel_contenedor_articulo.Size = new System.Drawing.Size(420, 830);
             this.panel_contenedor_articulo.TabIndex = 1;
-            // 
-            // gbx_campos
-            // 
-            this.gbx_campos.Controls.Add(this.cbo_marca);
-            this.gbx_campos.Controls.Add(this.cbo_categoria);
-            this.gbx_campos.Controls.Add(this.label9);
-            this.gbx_campos.Controls.Add(this.label10);
-            this.gbx_campos.Controls.Add(this.label11);
-            this.gbx_campos.Controls.Add(this.label12);
-            this.gbx_campos.Controls.Add(this.label13);
-            this.gbx_campos.Controls.Add(this.txt_nombre);
-            this.gbx_campos.Controls.Add(this.txt_descripcion);
-            this.gbx_campos.Controls.Add(this.txt_img);
-            this.gbx_campos.Controls.Add(this.txt_precio);
-            this.gbx_campos.Controls.Add(this.label14);
-            this.gbx_campos.Controls.Add(this.label15);
-            this.gbx_campos.Controls.Add(this.txt_codigo);
-            this.gbx_campos.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx_campos.Location = new System.Drawing.Point(12, 12);
-            this.gbx_campos.Name = "gbx_campos";
-            this.gbx_campos.Size = new System.Drawing.Size(405, 689);
-            this.gbx_campos.TabIndex = 1;
-            this.gbx_campos.TabStop = false;
-            this.gbx_campos.Text = "Detalle de Articulos:";
-            // 
-            // cbo_marca
-            // 
-            this.cbo_marca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_marca.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbo_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_marca.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_marca.FormattingEnabled = true;
-            this.cbo_marca.Location = new System.Drawing.Point(36, 566);
-            this.cbo_marca.Name = "cbo_marca";
-            this.cbo_marca.Size = new System.Drawing.Size(338, 37);
-            this.cbo_marca.TabIndex = 6;
-            // 
-            // cbo_categoria
-            // 
-            this.cbo_categoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbo_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_categoria.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_categoria.FormattingEnabled = true;
-            this.cbo_categoria.Location = new System.Drawing.Point(36, 640);
-            this.cbo_categoria.Name = "cbo_categoria";
-            this.cbo_categoria.Size = new System.Drawing.Size(338, 37);
-            this.cbo_categoria.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label9.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 371);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 22);
-            this.label9.TabIndex = 76;
-            this.label9.Text = "Url Imagen:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label10.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 445);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 22);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "Precio:";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label11.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 525);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 22);
-            this.label11.TabIndex = 74;
-            this.label11.Text = "Marca:";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 168);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 22);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "Descripción:";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label13.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 97);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(142, 22);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "Nombre Completo:";
-            // 
-            // txt_nombre
-            // 
-            this.txt_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_nombre.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre.Location = new System.Drawing.Point(36, 128);
-            this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(338, 32);
-            this.txt_nombre.TabIndex = 2;
-            // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_descripcion.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descripcion.Location = new System.Drawing.Point(36, 199);
-            this.txt_descripcion.Multiline = true;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(338, 170);
-            this.txt_descripcion.TabIndex = 3;
-            // 
-            // txt_img
-            // 
-            this.txt_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_img.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_img.Location = new System.Drawing.Point(36, 410);
-            this.txt_img.Name = "txt_img";
-            this.txt_img.Size = new System.Drawing.Size(338, 32);
-            this.txt_img.TabIndex = 4;
-            this.txt_img.Leave += new System.EventHandler(this.txt_img_Leave);
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label14.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 606);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 22);
-            this.label14.TabIndex = 66;
-            this.label14.Text = "Categoría:";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label15.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 22);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Nro Codigo:";
-            // 
-            // txt_codigo
-            // 
-            this.txt_codigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_codigo.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo.Location = new System.Drawing.Point(36, 58);
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(338, 32);
-            this.txt_codigo.TabIndex = 2;
             // 
             // gbo_container
             // 
@@ -277,9 +77,9 @@
             this.gbo_container.Controls.Add(this.btn_eliminar);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(31, 717);
+            this.gbo_container.Location = new System.Drawing.Point(12, 139);
             this.gbo_container.Name = "gbo_container";
-            this.gbo_container.Size = new System.Drawing.Size(323, 318);
+            this.gbo_container.Size = new System.Drawing.Size(391, 548);
             this.gbo_container.TabIndex = 2;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
@@ -296,9 +96,9 @@
             this.btn_detalle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_detalle.IconSize = 30;
             this.btn_detalle.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_detalle.Location = new System.Drawing.Point(16, 110);
+            this.btn_detalle.Location = new System.Drawing.Point(16, 238);
             this.btn_detalle.Name = "btn_detalle";
-            this.btn_detalle.Size = new System.Drawing.Size(291, 45);
+            this.btn_detalle.Size = new System.Drawing.Size(359, 45);
             this.btn_detalle.TabIndex = 25;
             this.btn_detalle.Text = "Ver Detalle";
             this.btn_detalle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -318,9 +118,9 @@
             this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_editar.IconSize = 30;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.Location = new System.Drawing.Point(16, 177);
+            this.btn_editar.Location = new System.Drawing.Point(16, 331);
             this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(291, 45);
+            this.btn_editar.Size = new System.Drawing.Size(359, 45);
             this.btn_editar.TabIndex = 29;
             this.btn_editar.Text = "Editar";
             this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -340,9 +140,9 @@
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_eliminar.IconSize = 30;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_eliminar.Location = new System.Drawing.Point(16, 242);
+            this.btn_eliminar.Location = new System.Drawing.Point(16, 432);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(291, 45);
+            this.btn_eliminar.Size = new System.Drawing.Size(359, 45);
             this.btn_eliminar.TabIndex = 28;
             this.btn_eliminar.Text = "Eminar";
             this.btn_eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -362,9 +162,9 @@
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_guardar.IconSize = 30;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(16, 48);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 140);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(291, 45);
+            this.btn_guardar.Size = new System.Drawing.Size(359, 45);
             this.btn_guardar.TabIndex = 2;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -415,7 +215,6 @@
             this.panel_filtro.Name = "panel_filtro";
             this.panel_filtro.Size = new System.Drawing.Size(1394, 149);
             this.panel_filtro.TabIndex = 2;
-            this.panel_filtro.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_filtro_Paint);
             // 
             // groupBox2
             // 
@@ -545,18 +344,7 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // txt_precio
-            // 
-            this.txt_precio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_precio.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_precio.Location = new System.Drawing.Point(36, 490);
-            this.txt_precio.Name = "txt_precio";
-            this.txt_precio.Size = new System.Drawing.Size(338, 32);
-            this.txt_precio.TabIndex = 5;
-            this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
-            // 
-            // FrmAgregar
+            // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -568,15 +356,13 @@
             this.Controls.Add(this.panel_contenedor_articulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(0, 188);
-            this.Name = "FrmAgregar";
+            this.Name = "FrmArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAgregar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmAgregar_Load);
+            this.Load += new System.EventHandler(this.FrmArticulo_Load);
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
-            this.gbx_campos.ResumeLayout(false);
-            this.gbx_campos.PerformLayout();
             this.gbo_container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).EndInit();
             this.panel_filtro.ResumeLayout(false);
@@ -595,20 +381,6 @@
         private System.Windows.Forms.DataGridView dgv_articulos;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox gbo_container;
-        private System.Windows.Forms.GroupBox gbx_campos;
-        private System.Windows.Forms.ComboBox cbo_marca;
-        private System.Windows.Forms.ComboBox cbo_categoria;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.TextBox txt_descripcion;
-        private System.Windows.Forms.TextBox txt_img;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt_codigo;
         private FontAwesome.Sharp.IconButton btn_detalle;
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
@@ -622,6 +394,5 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pbx_img;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.TextBox txt_precio;
     }
 }
