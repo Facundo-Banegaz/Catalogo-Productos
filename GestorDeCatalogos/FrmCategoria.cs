@@ -50,5 +50,10 @@ namespace GestorDeCatalogos
             frmAgregarMarCat.ShowDialog();  
         }
 
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            FrmAgregarMarCat frmAgregarMarCat = new FrmAgregarMarCat();
+            frmAgregarMarCat.ShowDialog();
+        }
     }
 }
