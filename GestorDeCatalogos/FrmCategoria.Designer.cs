@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.gbo_container = new System.Windows.Forms.GroupBox();
             this.btn_editar = new FontAwesome.Sharp.IconButton();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
-            this.gbx_categorias = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -47,14 +43,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dgv_categorias = new System.Windows.Forms.DataGridView();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
-            this.gbx_categorias.SuspendLayout();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -63,7 +56,6 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_contenedor_articulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel_contenedor_articulo.Controls.Add(this.gbo_container);
-            this.panel_contenedor_articulo.Controls.Add(this.gbx_categorias);
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(3, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
@@ -78,9 +70,9 @@
             this.gbo_container.Controls.Add(this.btn_eliminar);
             this.gbo_container.Controls.Add(this.btn_guardar);
             this.gbo_container.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbo_container.Location = new System.Drawing.Point(25, 371);
+            this.gbo_container.Location = new System.Drawing.Point(21, 200);
             this.gbo_container.Name = "gbo_container";
-            this.gbo_container.Size = new System.Drawing.Size(365, 356);
+            this.gbo_container.Size = new System.Drawing.Size(365, 467);
             this.gbo_container.TabIndex = 65;
             this.gbo_container.TabStop = false;
             this.gbo_container.Text = "Acciones:";
@@ -97,7 +89,7 @@
             this.btn_editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_editar.IconSize = 50;
             this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_editar.Location = new System.Drawing.Point(16, 156);
+            this.btn_editar.Location = new System.Drawing.Point(16, 182);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(333, 70);
             this.btn_editar.TabIndex = 29;
@@ -118,7 +110,7 @@
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_eliminar.IconSize = 50;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_eliminar.Location = new System.Drawing.Point(16, 252);
+            this.btn_eliminar.Location = new System.Drawing.Point(16, 308);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(333, 70);
             this.btn_eliminar.TabIndex = 28;
@@ -139,7 +131,7 @@
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_guardar.IconSize = 50;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(16, 51);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 66);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(333, 70);
             this.btn_guardar.TabIndex = 27;
@@ -148,41 +140,6 @@
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
-            // 
-            // gbx_categorias
-            // 
-            this.gbx_categorias.Controls.Add(this.label12);
-            this.gbx_categorias.Controls.Add(this.txt_descripcion);
-            this.gbx_categorias.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx_categorias.Location = new System.Drawing.Point(16, 33);
-            this.gbx_categorias.Name = "gbx_categorias";
-            this.gbx_categorias.Size = new System.Drawing.Size(387, 313);
-            this.gbx_categorias.TabIndex = 9;
-            this.gbx_categorias.TabStop = false;
-            this.gbx_categorias.Text = "Detalle de Categorias:";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label12.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 22);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "Nombre de la Categoria:";
-            // 
-            // txt_descripcion
-            // 
-            this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_descripcion.Location = new System.Drawing.Point(24, 106);
-            this.txt_descripcion.Multiline = true;
-            this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(328, 177);
-            this.txt_descripcion.TabIndex = 71;
             // 
             // label16
             // 
@@ -336,10 +293,6 @@
             this.dgv_categorias.TabIndex = 9;
             this.dgv_categorias.SelectionChanged += new System.EventHandler(this.dgv_categorias_SelectionChanged);
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -356,13 +309,10 @@
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
             this.gbo_container.ResumeLayout(false);
-            this.gbx_categorias.ResumeLayout(false);
-            this.gbx_categorias.PerformLayout();
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,9 +320,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_contenedor_articulo;
-        private System.Windows.Forms.GroupBox gbx_categorias;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -387,6 +334,5 @@
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_guardar;
-        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

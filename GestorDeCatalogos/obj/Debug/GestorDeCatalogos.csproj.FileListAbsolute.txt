@@ -25,3 +25,4 @@ C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\bin\D
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmConsultar.resources
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmArticulo.resources
 C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmCargar.resources
+C:\Users\baneg\source\repos\TpFinalNivel2_FacundoBanegaz\GestorDeCatalogos\obj\Debug\GestorDeCatalogos.FrmAgregarMarCat.resources

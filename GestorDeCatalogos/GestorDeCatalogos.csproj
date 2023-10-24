@@ -118,6 +118,9 @@
     <EmbeddedResource Include="FrmAcercaDe.resx">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarMarCat.resx">
+      <DependentUpon>FrmAgregarMarCat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmArticulo.resx">
       <DependentUpon>FrmArticulo.cs</DependentUpon>
     </EmbeddedResource>

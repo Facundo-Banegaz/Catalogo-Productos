@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel_contenedor_articulo = new System.Windows.Forms.Panel();
             this.gbo_container = new System.Windows.Forms.GroupBox();
             this.btn_detalle = new FontAwesome.Sharp.IconButton();
@@ -46,14 +45,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).BeginInit();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_img)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -340,10 +337,6 @@
             this.pbx_img.TabIndex = 3;
             this.pbx_img.TabStop = false;
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -369,7 +362,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_img)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,6 +385,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.PictureBox pbx_img;
-        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
