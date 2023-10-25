@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
+
 
 namespace GestorDeCatalogos
 {
@@ -18,142 +21,156 @@ namespace GestorDeCatalogos
             InitializeComponent();
         }
 
-        ////logica del comboBox
-        //LogicaCategoria logicaCategoria = new LogicaCategoria();
-        //LogicaMarca logicaMarca = new LogicaMarca();
+        private void FrmCargar_Load(object sender, EventArgs e)
+        {
 
-        //    try
-        //    {
+            ////logica del comboBox
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+            LogicaMarca logicaMarca = new LogicaMarca();
 
-        //        cbo_categoria.DataSource = logicaCategoria.CategoriaList();
+            try
+            {
 
-        //        cbo_marca.DataSource = logicaMarca.MarcaList();
-        //    }
-        //    catch (Exception ex)
-        //    {
+                cbo_categoria.DataSource = logicaCategoria.CategoriaList();
 
-        //        MessageBox.Show(ex.ToString());
-        //    }
+                cbo_marca.DataSource = logicaMarca.MarcaList();
+            }
+            catch (Exception ex)
+            {
 
-        //private void guadarArticulo()
-        //{
-        //    Articulo articulo = new Articulo();
-        //    LogicaArticulo logicaArticulo = new LogicaArticulo();
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
-        //    try
-        //    {
+        private void guadarArticulo()
+        {
+            Articulo articulo = new Articulo();
+            LogicaArticulo logicaArticulo = new LogicaArticulo();
 
-        //        if (validarcampos())
-        //        {
+            try
+            {
 
-
-
-        //            articulo.Codigo = txt_codigo.Text;
-        //            articulo.Nombre = txt_nombre.Text;
-        //            articulo.Descripcion = txt_descripcion.Text;
-
-        //            articulo.Marca = (Marca)cbo_marca.SelectedItem;
-
-        //            articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
-
-        //            articulo.ImagenUrl = txt_img.Text;
-        //            articulo.Precio = decimal.Parse(txt_precio.Text);
-
-        //            //validarcampos();
-
-        //            logicaArticulo.ArticuloAdd(articulo);
-
-        //            limpiarCamposProvider();
-        //            limpiarCampos(gbx_campos);
-        //            MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+                if (validarcampos())
+                {
 
 
 
-        //            cargarGrilla();
-        //        }
+                    articulo.Codigo = txt_codigo.Text;
+                    articulo.Nombre = txt_nombre.Text;
+                    articulo.Descripcion = txt_descripcion.Text;
+
+                    articulo.Marca = (Marca)cbo_marca.SelectedItem;
+
+                    articulo.Categoria = (Categoria)cbo_categoria.SelectedItem;
+
+                    articulo.ImagenUrl = txt_img.Text;
+                    articulo.Precio = decimal.Parse(txt_precio.Text);
 
 
-        //        else
-        //        {
-        //            MessageBox.Show("Debe Completar Todos los Campos!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
 
-        //        throw ex;
-        //    }
+                    logicaArticulo.ArticuloAdd(articulo);
 
-        //}
-        //private void limpiarCampos(Control control)
-        //{
-        //    foreach (Control txt in control.Controls)
-        //    {
-        //        if (txt is TextBox)
-        //        {
-        //            ((TextBox)txt).Clear();
-        //        }
-        //        else if (txt is ComboBox)
-        //        {
+                    limpiarCamposProvider();
+                    limpiarCampos(gbx_campos);
+                    MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
 
-        //            ((ComboBox)txt).SelectedItem = -1;
-        //        }
+                }
 
-        //    } 
-        //}
 
-        //private void limpiarCamposProvider( )
-        //{
-        //    errorProvider.SetError(txt_codigo, "");
-        //    errorProvider.SetError(txt_nombre, "");
-        //    errorProvider.SetError(txt_descripcion, "");
-        //    errorProvider.SetError(txt_img, "");
-        //    errorProvider.SetError(txt_precio, "");
-        //}
-        //private bool validarcampos()
-        //{
+                else
+                {
+                    MessageBox.Show("Debe Completar Todos los Campos!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
 
-        //    bool ok = true;
-        //    string codigo= txt_codigo.Text;
+                throw ex;
+            }
 
-        //    if(txt_codigo.Text =="")
-        //    {
+        }
+        private void limpiarCampos(Control control)
+        {
+            foreach (Control txt in control.Controls)
+            {
+                if (txt is TextBox)
+                {
+                    ((TextBox)txt).Clear();
+                }
+                else if (txt is ComboBox)
+                {
 
-        //        ok = false;
-        //        errorProvider.SetError(txt_codigo,"Ingresar Codigo");
-        //    }
-        //    if(txt_nombre.Text =="")
-        //    {
-        //        ok = false;
-        //        errorProvider.SetError(txt_nombre, "Ingresar Nombre");
-        //    }
-        //    if(txt_descripcion.Text=="")
-        //    {
-        //        ok= false;
-        //        errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
-        //    }
-        //    if(txt_img.Text=="")
-        //    {
-        //        ok = false;
-        //        errorProvider.SetError(txt_img, "Ingresar Url de Imagen");
-        //    }
-        //    if (txt_precio.Text == "")
-        //    {
-        //        ok = false;
-        //        errorProvider.SetError(txt_precio, "Ingresar  Precio");
-        //    }
+                    ((ComboBox)txt).SelectedItem = -1;
+                }
 
-        //    return ok;
-        //}
+            }
+        }
 
-        //private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-        //    {
-        //        MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //        e.Handled = true;
-        //        return;
-        //    }
-        //}
+        private void limpiarCamposProvider()
+        {
+            errorProvider.SetError(txt_codigo, "");
+            errorProvider.SetError(txt_nombre, "");
+            errorProvider.SetError(txt_descripcion, "");
+            errorProvider.SetError(txt_img, "");
+            errorProvider.SetError(txt_precio, "");
+        }
+        private bool validarcampos()
+        {
+
+            bool ok = true;
+            string codigo = txt_codigo.Text;
+
+            if (txt_codigo.Text == "")
+            {
+
+                ok = false;
+                errorProvider.SetError(txt_codigo, "Ingresar Codigo");
+            }
+            if (txt_nombre.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_nombre, "Ingresar Nombre");
+            }
+            if (txt_descripcion.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_descripcion, "Ingresar Descripcion");
+            }
+            if (txt_img.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_img, "Ingresar Url de Imagen");
+            }
+            if (txt_precio.Text == "")
+            {
+                ok = false;
+                errorProvider.SetError(txt_precio, "Ingresar  Precio");
+            }
+
+            return ok;
+        }
+
+
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            guadarArticulo();
+        }
+
+        private void txt_precio_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }
