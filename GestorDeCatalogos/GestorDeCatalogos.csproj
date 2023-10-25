@@ -95,12 +95,6 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsultar.Designer.cs">
-      <DependentUpon>FrmConsultar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmDetalleArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +118,9 @@
     <EmbeddedResource Include="FrmAcercaDe.resx">
       <DependentUpon>FrmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarCategoria.resx">
+      <DependentUpon>FrmAgregarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAgregarMarca.resx">
       <DependentUpon>FrmAgregarMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultar.resx">
-      <DependentUpon>FrmConsultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetalleArticulo.resx">
       <DependentUpon>FrmDetalleArticulo.cs</DependentUpon>

@@ -46,14 +46,15 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click_1(object sender, EventArgs e)
         {
-           FrmAgregarCategoria FrmAgregarCategoria = new FrmAgregarCategoria();
-            FrmAgregarCategoria.ShowDialog();  
+            FrmAgregarCategoria frmAgregarCategoria = new FrmAgregarCategoria();
+            frmAgregarCategoria.ShowDialog();
+
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmAgregarCategoria FrmAgregarCategoria = new FrmAgregarCategoria();
-            FrmAgregarCategoria.ShowDialog();
+            FrmAgregarCategoria frmModificarCategoria = new FrmAgregarCategoria();
+            frmModificarCategoria.ShowDialog();
         }
     }
 }
