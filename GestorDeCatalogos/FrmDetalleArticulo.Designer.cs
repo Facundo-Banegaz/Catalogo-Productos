@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.gbo_detalle = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lbl_1 = new System.Windows.Forms.Label();
-            this.pb_img = new System.Windows.Forms.PictureBox();
-            this.lbl_numero = new System.Windows.Forms.Label();
-            this.lbl_precio = new System.Windows.Forms.Label();
-            this.lbl_img = new System.Windows.Forms.Label();
-            this.lbl_categoria = new System.Windows.Forms.Label();
-            this.lbl_descripcion = new System.Windows.Forms.Label();
-            this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_marca = new System.Windows.Forms.Label();
+            this.lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_descripcion = new System.Windows.Forms.Label();
+            this.lbl_categoria = new System.Windows.Forms.Label();
+            this.lbl_img = new System.Windows.Forms.Label();
+            this.lbl_precio = new System.Windows.Forms.Label();
+            this.lbl_numero = new System.Windows.Forms.Label();
+            this.pb_img = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.gbo_detalle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_img)).BeginInit();
             this.SuspendLayout();
@@ -75,44 +75,84 @@
             this.gbo_detalle.TabStop = false;
             this.gbo_detalle.Text = "Detalle del articulo:";
             // 
-            // label8
+            // lbl_marca
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(48, 262);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 29);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "Categoría:";
+            this.lbl_marca.AutoSize = true;
+            this.lbl_marca.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_marca.Location = new System.Drawing.Point(261, 443);
+            this.lbl_marca.Name = "lbl_marca";
+            this.lbl_marca.Size = new System.Drawing.Size(160, 29);
+            this.lbl_marca.TabIndex = 84;
+            this.lbl_marca.Text = "label1dfsdfsfsd";
             // 
-            // label9
+            // lbl_nombre
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(36, 322);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 29);
-            this.label9.TabIndex = 76;
-            this.label9.Text = "Url Imagen:";
+            this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_nombre.Location = new System.Drawing.Point(261, 151);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(160, 29);
+            this.lbl_nombre.TabIndex = 83;
+            this.lbl_nombre.Text = "label1dfsdfsfsd";
             // 
-            // label10
+            // lbl_descripcion
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(38, 382);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 29);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "Precio:";
+            this.lbl_descripcion.AutoSize = true;
+            this.lbl_descripcion.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_descripcion.Location = new System.Drawing.Point(261, 205);
+            this.lbl_descripcion.Name = "lbl_descripcion";
+            this.lbl_descripcion.Size = new System.Drawing.Size(160, 29);
+            this.lbl_descripcion.TabIndex = 82;
+            this.lbl_descripcion.Text = "label1dfsdfsfsd";
+            // 
+            // lbl_categoria
+            // 
+            this.lbl_categoria.AutoSize = true;
+            this.lbl_categoria.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_categoria.Location = new System.Drawing.Point(261, 262);
+            this.lbl_categoria.Name = "lbl_categoria";
+            this.lbl_categoria.Size = new System.Drawing.Size(160, 29);
+            this.lbl_categoria.TabIndex = 81;
+            this.lbl_categoria.Text = "label1dfsdfsfsd";
+            // 
+            // lbl_img
+            // 
+            this.lbl_img.AutoSize = true;
+            this.lbl_img.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_img.Location = new System.Drawing.Point(261, 322);
+            this.lbl_img.Name = "lbl_img";
+            this.lbl_img.Size = new System.Drawing.Size(160, 29);
+            this.lbl_img.TabIndex = 80;
+            this.lbl_img.Text = "label1dfsdfsfsd";
+            // 
+            // lbl_precio
+            // 
+            this.lbl_precio.AutoSize = true;
+            this.lbl_precio.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_precio.Location = new System.Drawing.Point(261, 382);
+            this.lbl_precio.Name = "lbl_precio";
+            this.lbl_precio.Size = new System.Drawing.Size(160, 29);
+            this.lbl_precio.TabIndex = 79;
+            this.lbl_precio.Text = "label1dfsdfsfsd";
+            // 
+            // lbl_numero
+            // 
+            this.lbl_numero.AutoSize = true;
+            this.lbl_numero.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lbl_numero.Location = new System.Drawing.Point(261, 101);
+            this.lbl_numero.Name = "lbl_numero";
+            this.lbl_numero.Size = new System.Drawing.Size(160, 29);
+            this.lbl_numero.TabIndex = 78;
+            this.lbl_numero.Text = "label1dfsdfsfsd";
+            // 
+            // pb_img
+            // 
+            this.pb_img.Location = new System.Drawing.Point(696, 130);
+            this.pb_img.Name = "pb_img";
+            this.pb_img.Size = new System.Drawing.Size(354, 281);
+            this.pb_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_img.TabIndex = 0;
+            this.pb_img.TabStop = false;
             // 
             // label11
             // 
@@ -127,31 +167,44 @@
             this.label11.TabIndex = 74;
             this.label11.Text = "Marca:";
             // 
-            // label12
+            // label10
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(38, 205);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 29);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "Descripción:";
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(38, 382);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 29);
+            this.label10.TabIndex = 75;
+            this.label10.Text = "Precio:";
             // 
-            // label13
+            // label9
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(38, 151);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(192, 29);
-            this.label13.TabIndex = 72;
-            this.label13.Text = "Nombre Completo:";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(36, 322);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 29);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Url Imagen:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(48, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 29);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "Categoría:";
             // 
             // lbl_1
             // 
@@ -166,90 +219,37 @@
             this.lbl_1.TabIndex = 65;
             this.lbl_1.Text = "Nro Codigo:";
             // 
-            // pb_img
+            // label13
             // 
-            this.pb_img.Location = new System.Drawing.Point(696, 130);
-            this.pb_img.Name = "pb_img";
-            this.pb_img.Size = new System.Drawing.Size(354, 281);
-            this.pb_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_img.TabIndex = 0;
-            this.pb_img.TabStop = false;
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(38, 151);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(192, 29);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Nombre Completo:";
             // 
-            // lbl_numero
+            // label12
             // 
-            this.lbl_numero.AutoSize = true;
-            this.lbl_numero.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_numero.Location = new System.Drawing.Point(261, 101);
-            this.lbl_numero.Name = "lbl_numero";
-            this.lbl_numero.Size = new System.Drawing.Size(160, 29);
-            this.lbl_numero.TabIndex = 78;
-            this.lbl_numero.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_precio
-            // 
-            this.lbl_precio.AutoSize = true;
-            this.lbl_precio.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_precio.Location = new System.Drawing.Point(261, 382);
-            this.lbl_precio.Name = "lbl_precio";
-            this.lbl_precio.Size = new System.Drawing.Size(160, 29);
-            this.lbl_precio.TabIndex = 79;
-            this.lbl_precio.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_img
-            // 
-            this.lbl_img.AutoSize = true;
-            this.lbl_img.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_img.Location = new System.Drawing.Point(261, 322);
-            this.lbl_img.Name = "lbl_img";
-            this.lbl_img.Size = new System.Drawing.Size(160, 29);
-            this.lbl_img.TabIndex = 80;
-            this.lbl_img.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_categoria
-            // 
-            this.lbl_categoria.AutoSize = true;
-            this.lbl_categoria.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_categoria.Location = new System.Drawing.Point(261, 262);
-            this.lbl_categoria.Name = "lbl_categoria";
-            this.lbl_categoria.Size = new System.Drawing.Size(160, 29);
-            this.lbl_categoria.TabIndex = 81;
-            this.lbl_categoria.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_descripcion
-            // 
-            this.lbl_descripcion.AutoSize = true;
-            this.lbl_descripcion.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_descripcion.Location = new System.Drawing.Point(261, 205);
-            this.lbl_descripcion.Name = "lbl_descripcion";
-            this.lbl_descripcion.Size = new System.Drawing.Size(160, 29);
-            this.lbl_descripcion.TabIndex = 82;
-            this.lbl_descripcion.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_nombre
-            // 
-            this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_nombre.Location = new System.Drawing.Point(261, 151);
-            this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(160, 29);
-            this.lbl_nombre.TabIndex = 83;
-            this.lbl_nombre.Text = "label1dfsdfsfsd";
-            // 
-            // lbl_marca
-            // 
-            this.lbl_marca.AutoSize = true;
-            this.lbl_marca.BackColor = System.Drawing.SystemColors.Desktop;
-            this.lbl_marca.Location = new System.Drawing.Point(261, 443);
-            this.lbl_marca.Name = "lbl_marca";
-            this.lbl_marca.Size = new System.Drawing.Size(160, 29);
-            this.lbl_marca.TabIndex = 84;
-            this.lbl_marca.Text = "label1dfsdfsfsd";
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(38, 205);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(136, 29);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "Descripción:";
             // 
             // FrmDetalleArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1153, 588);
             this.Controls.Add(this.gbo_detalle);
             this.Name = "FrmDetalleArticulo";

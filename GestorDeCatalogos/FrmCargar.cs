@@ -16,11 +16,20 @@ namespace GestorDeCatalogos
 {
     public partial class FrmCargar : Form
     {
+        private Articulo articulo = null;
+
         public FrmCargar()
         {
             InitializeComponent();
+            Text = "Cargar Articulos";
         }
 
+        public FrmCargar(Articulo articulo) 
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Editar Articulos";
+        }
         private void FrmCargar_Load(object sender, EventArgs e)
         {
 
@@ -32,8 +41,26 @@ namespace GestorDeCatalogos
             {
 
                 cbo_categoria.DataSource = logicaCategoria.CategoriaList();
+                cbo_categoria.ValueMember = "Id";
+                cbo_categoria.DisplayMember = "Descripcion";
 
                 cbo_marca.DataSource = logicaMarca.MarcaList();
+                cbo_marca.ValueMember = "Id";
+                cbo_marca.DisplayMember = "Descripcion";
+
+                if(articulo!=null)
+                {
+                    txt_codigo.Text = articulo.Codigo;
+                    txt_nombre.Text = articulo.Nombre;
+                    txt_precio.Text = articulo.Precio.ToString();
+                    txt_img.Text    = articulo.ImagenUrl;
+                    cargarImg(txt_img.Text);
+                    txt_descripcion.Text = articulo.Descripcion;
+
+                    cbo_marca.SelectedValue = articulo.Marca.Id;
+                    cbo_categoria.SelectedValue = articulo.Categoria.Id;
+                    
+                }
             }
             catch (Exception ex)
             {
@@ -44,8 +71,8 @@ namespace GestorDeCatalogos
 
         private void guadarArticulo()
         {
-            Articulo articulo = new Articulo();
-            LogicaArticulo logicaArticulo = new LogicaArticulo();
+            
+          LogicaArticulo logicaArticulo = new LogicaArticulo();
 
             try
             {
@@ -53,6 +80,8 @@ namespace GestorDeCatalogos
                 if (validarcampos())
                 {
 
+                    if(articulo == null)
+                        articulo = new Articulo();
 
 
                     articulo.Codigo = txt_codigo.Text;
@@ -66,13 +95,21 @@ namespace GestorDeCatalogos
                     articulo.ImagenUrl = txt_img.Text;
                     articulo.Precio = decimal.Parse(txt_precio.Text);
 
+                    cargarImg(articulo.ImagenUrl);
 
-
-                    logicaArticulo.ArticuloAdd(articulo);
-
+                    if (articulo.id != 0)
+                    {
+                        logicaArticulo.ArticuloModify(articulo);
+                        MessageBox.Show("El articulo Fue Modificado Exitosamente!!");
+                    }
+                    else
+                    {
+                        logicaArticulo.ArticuloAdd(articulo);
+                        MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+                    }
                     limpiarCamposProvider();
                     limpiarCampos(gbx_campos);
-                    MessageBox.Show("El articulo Fue Agregado Exitosamente!!");
+                    this.Close();
 
                 }
 
@@ -89,6 +126,8 @@ namespace GestorDeCatalogos
             }
 
         }
+
+
         private void limpiarCampos(Control control)
         {
             foreach (Control txt in control.Controls)
@@ -151,15 +190,21 @@ namespace GestorDeCatalogos
         }
 
 
-        private void txt_precio_KeyPress_1(object sender, KeyPressEventArgs e)
+
+
+        private void cargarImg(string img)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            try
             {
-                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
+                pbx_img.Load(img);
+            }
+            catch (Exception)
+            {
+
+                pbx_img.Load("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081");
             }
         }
+
 
         private void btn_guardar_Click_1(object sender, EventArgs e)
         {
@@ -169,6 +214,21 @@ namespace GestorDeCatalogos
         private void btn_cancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_precio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_img_Leave(object sender, EventArgs e)
+        {
+            cargarImg(txt_img.Text);
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 
 
@@ -50,6 +52,7 @@ namespace GestorDeCatalogos
         {
           FrmCargar frmCargar   = new FrmCargar();
             frmCargar.ShowDialog();
+            cargarGrilla();
         }
 
         private void btn_detalle_Click(object sender, EventArgs e)
@@ -60,15 +63,40 @@ namespace GestorDeCatalogos
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmCargar frmEditar = new FrmCargar();
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgv_articulos.CurrentRow.DataBoundItem;
+
+            FrmCargar frmEditar = new FrmCargar(seleccionado);
             frmEditar.ShowDialog();
+            cargarGrilla();
         }
 
 
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            LogicaArticulo logicaArticulo = new LogicaArticulo();
+            Articulo articuloSeleccionado;
 
+            try
+            {
+               DialogResult respuesta =  MessageBox.Show("¿Quieres Eliminar este Articulo?","Eliminar",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);   
+
+                if(respuesta == DialogResult.Yes) 
+                {
+                    articuloSeleccionado = (Articulo)dgv_articulos.CurrentRow.DataBoundItem;
+
+                    logicaArticulo.ArticuloDelete(articuloSeleccionado.id);
+                    cargarGrilla();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgv_articulos_SelectionChanged(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace Negocio
             {
 
 
-                accesoDatos.setConsutar("select art.Id, art.Codigo, art.Nombre, art.Descripcion,art.ImagenUrl, art.Precio,cat.Descripcion as categoria,mar.Descripcion as Marca  from ARTICULOS as art  join CATEGORIAS as cat  on art.IdCategoria= cat.Id join MARCAS as mar on art.IdMarca = mar.Id;");
+                accesoDatos.setConsutar("select art.Id, art.Codigo, art.Nombre, art.Descripcion,art.ImagenUrl, art.Precio,art.IdMarca,cat.Descripcion as categoria,art.IdCategoria,mar.Descripcion as Marca  from ARTICULOS as art  join CATEGORIAS as cat  on art.IdCategoria= cat.Id join MARCAS as mar on art.IdMarca = mar.Id;");
 
                 accesoDatos.ejecutarLectura();
 
@@ -47,13 +47,17 @@ namespace Negocio
                         aux.ImagenUrl = (string)accesoDatos.Lector["ImagenUrl"];
 
                     aux.Precio = (decimal)accesoDatos.Lector["Precio"];
-                    
+
+
                     aux.Marca = new Marca();
+
+                    aux.Marca.Id = (int)accesoDatos.Lector["IdMarca"];
 
                     aux.Marca.Descripcion = (string)accesoDatos.Lector["Marca"];
 
                     aux.Categoria = new Categoria();
 
+                    aux.Categoria.Id = (int)accesoDatos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)accesoDatos.Lector["Categoria"] ;  
 
                     articulos.Add(aux);
@@ -108,11 +112,35 @@ namespace Negocio
         
         }
 
-        public void ArticuloModify()
-        { 
-        
-        
+        public void ArticuloModify(Articulo Articulo)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();    
 
+            try
+            {
+                accesoDatos.setConsutar("update articulos set  Codigo=@Codigo, Nombre=@Nombre, Descripcion=@Descripcion, IdMarca=@IdMarca, Idcategoria=@IdCategoria,ImagenUrl=@ImagenUrl,Precio=@Precio where Id=@Id;");
+
+                accesoDatos.setearParametro("@Id", Articulo.id);
+                accesoDatos.setearParametro("@Codigo", Articulo.Codigo);
+                accesoDatos.setearParametro("@Nombre", Articulo.Nombre);
+                accesoDatos.setearParametro("@Descripcion", Articulo.Descripcion);
+                accesoDatos.setearParametro("@ImagenUrl", Articulo.ImagenUrl);
+                accesoDatos.setearParametro("@Precio", Articulo.Precio);
+                accesoDatos.setearParametro("@IdMarca", Articulo.Marca.Id);
+                accesoDatos.setearParametro("@IdCategoria", Articulo.Categoria.Id);
+
+                accesoDatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            { 
+                accesoDatos.CerrarConection();
+            }
         }
 
         public bool validarCodigo(string codigo)
@@ -154,12 +182,27 @@ namespace Negocio
                 accesoDatos.CerrarConection();
             }
         }
+        public void ArticuloDelete(int Id)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setConsutar("Delete from ARTICULOS where Id=@Id");
+                accesoDatos.setearParametro("@Id", Id);
 
-            public void ArticuloDelete()
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
             {
 
+                throw ex;
+            }
+            finally
+            {
 
-            } 
-    
+                accesoDatos.CerrarConection();
+            }
+        }
+
     }
 }

@@ -107,5 +107,51 @@ namespace Negocio
                 datos.CerrarConection(); 
             }
         }
+
+        public void CategoriaModify(Categoria categoria)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setConsutar("update CATEGORIAS set  Descripcion=@Descripcion where Id=@Id");
+
+                accesoDatos.setearParametro("@Descripcion", categoria.Descripcion);
+                accesoDatos.setearParametro("@Id", categoria.Id);
+
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.CerrarConection();
+            }
+        }
+
+        public void CategoriaDelete(int Id)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setConsutar("Delete from Categorias where Id=@Id");
+                accesoDatos.setearParametro("@Id", Id);
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.CerrarConection();
+            }
+        }
     }
 }

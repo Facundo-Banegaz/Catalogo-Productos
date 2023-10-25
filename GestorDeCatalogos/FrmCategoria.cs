@@ -48,13 +48,41 @@ namespace GestorDeCatalogos
         {
             FrmAgregarCategoria frmAgregarCategoria = new FrmAgregarCategoria();
             frmAgregarCategoria.ShowDialog();
-
+            cargarGrilla();
         }
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmAgregarCategoria frmModificarCategoria = new FrmAgregarCategoria();
+            Categoria categoriaSeleccionada;
+            categoriaSeleccionada = (Categoria)dgv_categorias.CurrentRow.DataBoundItem;
+
+            FrmAgregarCategoria frmModificarCategoria = new FrmAgregarCategoria(categoriaSeleccionada);
             frmModificarCategoria.ShowDialog();
+            cargarGrilla();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+            Categoria categoriaSeleccionada;
+            try
+            {
+
+                DialogResult respuesta = MessageBox.Show("¿Quieres Eliminar esta Categoria?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    categoriaSeleccionada = (Categoria)dgv_categorias.CurrentRow.DataBoundItem;
+
+                    logicaCategoria.CategoriaDelete(categoriaSeleccionada.Id);
+                    cargarGrilla();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

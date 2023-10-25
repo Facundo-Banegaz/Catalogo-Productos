@@ -74,7 +74,7 @@
             this.gbx_campos.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbx_campos.Location = new System.Drawing.Point(12, 12);
             this.gbx_campos.Name = "gbx_campos";
-            this.gbx_campos.Size = new System.Drawing.Size(527, 1213);
+            this.gbx_campos.Size = new System.Drawing.Size(527, 1208);
             this.gbx_campos.TabIndex = 2;
             this.gbx_campos.TabStop = false;
             this.gbx_campos.Text = "Detalle de Articulos:";
@@ -114,6 +114,7 @@
             this.txt_img.Name = "txt_img";
             this.txt_img.Size = new System.Drawing.Size(477, 32);
             this.txt_img.TabIndex = 77;
+            this.txt_img.Leave += new System.EventHandler(this.txt_img_Leave);
             // 
             // txt_precio
             // 
@@ -124,6 +125,7 @@
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(477, 32);
             this.txt_precio.TabIndex = 78;
+            this.txt_precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precio_KeyPress);
             // 
             // cbo_marca
             // 
@@ -133,7 +135,7 @@
             this.cbo_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_marca.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_marca.FormattingEnabled = true;
-            this.cbo_marca.Location = new System.Drawing.Point(19, 967);
+            this.cbo_marca.Location = new System.Drawing.Point(20, 917);
             this.cbo_marca.Name = "cbo_marca";
             this.cbo_marca.Size = new System.Drawing.Size(477, 37);
             this.cbo_marca.TabIndex = 6;
@@ -146,7 +148,7 @@
             this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_categoria.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_categoria.FormattingEnabled = true;
-            this.cbo_categoria.Location = new System.Drawing.Point(20, 1103);
+            this.cbo_categoria.Location = new System.Drawing.Point(20, 1063);
             this.cbo_categoria.Name = "cbo_categoria";
             this.cbo_categoria.Size = new System.Drawing.Size(477, 37);
             this.cbo_categoria.TabIndex = 7;
@@ -158,7 +160,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label11.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(24, 929);
+            this.label11.Location = new System.Drawing.Point(25, 879);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 22);
             this.label11.TabIndex = 74;
@@ -208,7 +210,7 @@
             this.txt_descripcion.Location = new System.Drawing.Point(19, 629);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
-            this.txt_descripcion.Size = new System.Drawing.Size(477, 183);
+            this.txt_descripcion.Size = new System.Drawing.Size(477, 178);
             this.txt_descripcion.TabIndex = 3;
             // 
             // label14
@@ -218,7 +220,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label14.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 1064);
+            this.label14.Location = new System.Drawing.Point(16, 1024);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(85, 22);
             this.label14.TabIndex = 66;
@@ -252,10 +254,10 @@
             this.pbx_img.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbx_img.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pbx_img.Location = new System.Drawing.Point(798, 330);
+            this.pbx_img.Location = new System.Drawing.Point(670, 76);
             this.pbx_img.Name = "pbx_img";
-            this.pbx_img.Size = new System.Drawing.Size(581, 349);
-            this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_img.Size = new System.Drawing.Size(773, 808);
+            this.pbx_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbx_img.TabIndex = 4;
             this.pbx_img.TabStop = false;
             // 
@@ -271,7 +273,7 @@
             this.btn_cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cancelar.IconSize = 45;
             this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cancelar.Location = new System.Drawing.Point(1096, 1136);
+            this.btn_cancelar.Location = new System.Drawing.Point(1089, 1150);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(450, 70);
             this.btn_cancelar.TabIndex = 78;
@@ -293,7 +295,7 @@
             this.btn_guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_guardar.IconSize = 45;
             this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(593, 1136);
+            this.btn_guardar.Location = new System.Drawing.Point(580, 1150);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(450, 70);
             this.btn_guardar.TabIndex = 77;
@@ -315,9 +317,9 @@
             this.btn_img_local.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_img_local.IconSize = 40;
             this.btn_img_local.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_img_local.Location = new System.Drawing.Point(788, 722);
+            this.btn_img_local.Location = new System.Drawing.Point(670, 927);
             this.btn_img_local.Name = "btn_img_local";
-            this.btn_img_local.Size = new System.Drawing.Size(591, 70);
+            this.btn_img_local.Size = new System.Drawing.Size(773, 70);
             this.btn_img_local.TabIndex = 79;
             this.btn_img_local.Text = "Subir Imagen Local";
             this.btn_img_local.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -333,7 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1571, 1237);
+            this.ClientSize = new System.Drawing.Size(1571, 1231);
             this.Controls.Add(this.btn_img_local);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_guardar);

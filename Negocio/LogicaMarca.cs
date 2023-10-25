@@ -104,5 +104,52 @@ namespace Negocio
             }
             finally { datos.CerrarConection(); }
         }
+
+        public void MarcaModify(Marca marca)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();    
+
+            try
+            {
+                accesoDatos.setConsutar("update Marcas set  Descripcion=@Descripcion where Id=@Id");
+
+                accesoDatos.setearParametro("@Descripcion",marca.Descripcion);
+                accesoDatos.setearParametro("@Id", marca.Id);
+
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally 
+            {
+                accesoDatos.CerrarConection();
+            }
+        }
+
+        public void MarcaDelete(int Id)
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setConsutar("Delete from Marcas where Id=@Id");
+                accesoDatos.setearParametro("@Id",Id);
+
+                accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+
+                accesoDatos.CerrarConection();
+            }
+        }
     }
 }

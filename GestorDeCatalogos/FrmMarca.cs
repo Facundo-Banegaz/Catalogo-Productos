@@ -24,22 +24,46 @@ namespace GestorDeCatalogos
         {
             FrmAgregarMarca frmAgregarMarca = new FrmAgregarMarca();
             frmAgregarMarca.ShowDialog();
-
+            cargarGrilla();
         }
 
 
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmAgregarMarca frmModificarMarca = new FrmAgregarMarca();
+            Marca marcaSeleccionada;
+            marcaSeleccionada = (Marca)dgv_marcas.CurrentRow.DataBoundItem;
+
+            FrmAgregarMarca frmModificarMarca = new FrmAgregarMarca(marcaSeleccionada);
+
             frmModificarMarca.ShowDialog();
+            cargarGrilla();
         }
 
 
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
+            LogicaMarca logicaMarca = new LogicaMarca();
+            Marca marcaSeleccionada;
+            try
+            {
 
+                DialogResult respuesta = MessageBox.Show("¿Quieres Eliminar esta Marca?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    marcaSeleccionada = (Marca)dgv_marcas.CurrentRow.DataBoundItem;
+                    logicaMarca.MarcaDelete(marcaSeleccionada.Id);
+                    cargarGrilla();
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgv_marcas_SelectionChanged(object sender, EventArgs e)
