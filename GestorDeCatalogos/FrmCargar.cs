@@ -151,18 +151,6 @@ namespace GestorDeCatalogos
         }
 
 
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            guadarArticulo();
-        }
-
         private void txt_precio_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
@@ -171,6 +159,16 @@ namespace GestorDeCatalogos
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            guadarArticulo();
+        }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
