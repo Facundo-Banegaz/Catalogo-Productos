@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestorDeCatalogos
 {
-    public partial class FrmAgregarMarCat : Form
+    public partial class FrmAgregarMarca : Form
     {
-        public FrmAgregarMarCat()
+        public FrmAgregarMarca()
         {
             InitializeComponent();
         }

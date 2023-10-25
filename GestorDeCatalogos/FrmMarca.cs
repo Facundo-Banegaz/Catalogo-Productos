@@ -22,16 +22,16 @@ namespace GestorDeCatalogos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            FrmAgregarMarCat frmAgregarMarCat = new FrmAgregarMarCat();
-            frmAgregarMarCat.ShowDialog();
+            FrmAgregarMarca frmAgregarMarca = new FrmAgregarMarca();
+            frmAgregarMarca.ShowDialog();
         }
 
 
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            FrmAgregarMarCat frmAgregarMarCat = new FrmAgregarMarCat();
-            frmAgregarMarCat.ShowDialog();
+            FrmAgregarMarca frmAgregarMarca = new FrmAgregarMarca();
+            frmAgregarMarca.ShowDialog();
         }
 
 

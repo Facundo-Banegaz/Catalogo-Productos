@@ -1,6 +1,6 @@
 ﻿namespace GestorDeCatalogos
 {
-    partial class FrmAgregarMarCat
+    partial class FrmAgregarMarca
     {
         /// <summary>
         /// Required designer variable.
