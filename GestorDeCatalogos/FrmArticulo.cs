@@ -57,7 +57,10 @@ namespace GestorDeCatalogos
 
         private void btn_detalle_Click(object sender, EventArgs e)
         {
-            FrmDetalleArticulo frmDetalleArticulo = new FrmDetalleArticulo();
+            Articulo seleccionado;
+            seleccionado = (Articulo)dgv_articulos.CurrentRow.DataBoundItem;
+
+            FrmDetalleArticulo frmDetalleArticulo = new FrmDetalleArticulo(seleccionado);
             frmDetalleArticulo.ShowDialog();
         }
 
