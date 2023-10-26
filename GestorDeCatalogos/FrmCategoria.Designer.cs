@@ -34,20 +34,19 @@
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_guardar = new FontAwesome.Sharp.IconButton();
             this.label16 = new System.Windows.Forms.Label();
+            this.dgv_categorias = new System.Windows.Forms.DataGridView();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_categoria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_buscador = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.dgv_categorias = new System.Windows.Forms.DataGridView();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
             this.panel_filtro.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor_articulo
@@ -155,127 +154,6 @@
             this.label16.TabIndex = 41;
             this.label16.Text = "Detalle Articulo";
             // 
-            // panel_filtro
-            // 
-            this.panel_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_filtro.BackColor = System.Drawing.SystemColors.Control;
-            this.panel_filtro.Controls.Add(this.groupBox2);
-            this.panel_filtro.Location = new System.Drawing.Point(425, 12);
-            this.panel_filtro.Name = "panel_filtro";
-            this.panel_filtro.Size = new System.Drawing.Size(1373, 149);
-            this.panel_filtro.TabIndex = 6;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.iconButton2);
-            this.groupBox2.Controls.Add(this.iconButton3);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.iconButton1);
-            this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(22, 24);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1332, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista de Categorias:";
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Download;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.Location = new System.Drawing.Point(6, 57);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(243, 37);
-            this.iconButton2.TabIndex = 63;
-            this.iconButton2.Text = "Descargar PDF";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.Crimson;
-            this.iconButton3.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(1168, 31);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(149, 46);
-            this.iconButton3.TabIndex = 69;
-            this.iconButton3.Text = "Limpiar";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(398, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 37);
-            this.comboBox1.TabIndex = 66;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 29);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Buscar por:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(719, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 37);
-            this.textBox2.TabIndex = 65;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton1.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(992, 31);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(158, 46);
-            this.iconButton1.TabIndex = 64;
-            this.iconButton1.Text = "Buscar";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // dgv_categorias
             // 
             this.dgv_categorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -295,14 +173,114 @@
             this.dgv_categorias.TabIndex = 9;
             this.dgv_categorias.SelectionChanged += new System.EventHandler(this.dgv_categorias_SelectionChanged);
             // 
+            // panel_filtro
+            // 
+            this.panel_filtro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_filtro.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_filtro.Controls.Add(this.groupBox2);
+            this.panel_filtro.Location = new System.Drawing.Point(434, 12);
+            this.panel_filtro.Name = "panel_filtro";
+            this.panel_filtro.Size = new System.Drawing.Size(1394, 149);
+            this.panel_filtro.TabIndex = 10;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.iconButton3);
+            this.groupBox2.Controls.Add(this.cbo_categoria);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txt_buscador);
+            this.groupBox2.Controls.Add(this.iconButton1);
+            this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 25);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1372, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lista de Articulos:";
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.Crimson;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton3.Location = new System.Drawing.Point(1208, 31);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(149, 46);
+            this.iconButton3.TabIndex = 69;
+            this.iconButton3.Text = "Limpiar";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // cbo_categoria
+            // 
+            this.cbo_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_categoria.FormattingEnabled = true;
+            this.cbo_categoria.Location = new System.Drawing.Point(268, 40);
+            this.cbo_categoria.Name = "cbo_categoria";
+            this.cbo_categoria.Size = new System.Drawing.Size(758, 37);
+            this.cbo_categoria.TabIndex = 66;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 29);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Buscar por:";
+            // 
+            // txt_buscador
+            // 
+            this.txt_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_buscador.Location = new System.Drawing.Point(351, 39);
+            this.txt_buscador.Name = "txt_buscador";
+            this.txt_buscador.Size = new System.Drawing.Size(675, 37);
+            this.txt_buscador.TabIndex = 65;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton1.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.iconButton1.Location = new System.Drawing.Point(1032, 31);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(158, 46);
+            this.iconButton1.TabIndex = 64;
+            this.iconButton1.Text = "Buscar";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1810, 730);
+            this.Controls.Add(this.panel_filtro);
             this.Controls.Add(this.dgv_categorias);
             this.Controls.Add(this.panel_contenedor_articulo);
-            this.Controls.Add(this.panel_filtro);
             this.Name = "FrmCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmCategoria";
@@ -311,10 +289,10 @@
             this.panel_contenedor_articulo.ResumeLayout(false);
             this.panel_contenedor_articulo.PerformLayout();
             this.gbo_container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).EndInit();
             this.panel_filtro.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,18 +301,17 @@
 
         private System.Windows.Forms.Panel panel_contenedor_articulo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel_filtro;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.DataGridView dgv_categorias;
         private System.Windows.Forms.GroupBox gbo_container;
         private FontAwesome.Sharp.IconButton btn_editar;
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_guardar;
+        private System.Windows.Forms.Panel panel_filtro;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.ComboBox cbo_categoria;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_buscador;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

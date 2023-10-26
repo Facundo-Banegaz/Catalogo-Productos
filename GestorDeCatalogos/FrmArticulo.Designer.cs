@@ -38,11 +38,10 @@
             this.dgv_articulos = new System.Windows.Forms.DataGridView();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbo_categoria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_buscador = new System.Windows.Forms.TextBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
             this.panel_contenedor_articulo.SuspendLayout();
@@ -218,11 +217,10 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.iconButton2);
             this.groupBox2.Controls.Add(this.iconButton3);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbo_categoria);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txt_buscador);
             this.groupBox2.Controls.Add(this.iconButton1);
             this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 25);
@@ -231,26 +229,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Articulos:";
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Download;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton2.Location = new System.Drawing.Point(6, 57);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(243, 37);
-            this.iconButton2.TabIndex = 63;
-            this.iconButton2.Text = "Descargar PDF";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -273,36 +251,35 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cbo_categoria
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(438, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 37);
-            this.comboBox1.TabIndex = 66;
+            this.cbo_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_categoria.FormattingEnabled = true;
+            this.cbo_categoria.Location = new System.Drawing.Point(290, 40);
+            this.cbo_categoria.Name = "cbo_categoria";
+            this.cbo_categoria.Size = new System.Drawing.Size(736, 37);
+            this.cbo_categoria.TabIndex = 66;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 37);
+            this.label1.Location = new System.Drawing.Point(17, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 29);
             this.label1.TabIndex = 68;
             this.label1.Text = "Buscar por:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txt_buscador
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(759, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(267, 37);
-            this.textBox2.TabIndex = 65;
+            this.txt_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_buscador.Location = new System.Drawing.Point(351, 39);
+            this.txt_buscador.Name = "txt_buscador";
+            this.txt_buscador.Size = new System.Drawing.Size(675, 37);
+            this.txt_buscador.TabIndex = 65;
             // 
             // iconButton1
             // 
@@ -378,12 +355,11 @@
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_buscador;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbo_categoria;
         private System.Windows.Forms.PictureBox pbx_img;
     }
 }
