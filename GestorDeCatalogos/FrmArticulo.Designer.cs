@@ -255,10 +255,11 @@
             // 
             this.cbo_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_categoria.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_categoria.FormattingEnabled = true;
-            this.cbo_categoria.Location = new System.Drawing.Point(290, 40);
+            this.cbo_categoria.Location = new System.Drawing.Point(243, 39);
             this.cbo_categoria.Name = "cbo_categoria";
-            this.cbo_categoria.Size = new System.Drawing.Size(736, 37);
+            this.cbo_categoria.Size = new System.Drawing.Size(736, 47);
             this.cbo_categoria.TabIndex = 66;
             // 
             // label1
@@ -276,9 +277,10 @@
             // txt_buscador
             // 
             this.txt_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_buscador.Location = new System.Drawing.Point(351, 39);
+            this.txt_buscador.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buscador.Location = new System.Drawing.Point(243, 39);
             this.txt_buscador.Name = "txt_buscador";
-            this.txt_buscador.Size = new System.Drawing.Size(675, 37);
+            this.txt_buscador.Size = new System.Drawing.Size(765, 47);
             this.txt_buscador.TabIndex = 65;
             // 
             // iconButton1
