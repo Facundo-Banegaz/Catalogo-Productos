@@ -238,9 +238,9 @@
             this.txt_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_buscador.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscador.Location = new System.Drawing.Point(268, 39);
+            this.txt_buscador.Location = new System.Drawing.Point(262, 39);
             this.txt_buscador.Name = "txt_buscador";
-            this.txt_buscador.Size = new System.Drawing.Size(675, 47);
+            this.txt_buscador.Size = new System.Drawing.Size(681, 47);
             this.txt_buscador.TabIndex = 65;
             // 
             // btn_buscar
