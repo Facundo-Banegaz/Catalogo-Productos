@@ -325,6 +325,7 @@
             this.btn_img_local.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_img_local.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_img_local.UseVisualStyleBackColor = false;
+            this.btn_img_local.Click += new System.EventHandler(this.btn_img_local_Click);
             // 
             // errorProvider
             // 

@@ -143,45 +143,7 @@ namespace Negocio
             }
         }
 
-        public bool validarCodigo(string codigo)
-        {
-            List<Articulo> lista = new List<Articulo>();
-            AccesoDatos accesoDatos = new AccesoDatos();
 
-            try
-            {
-                accesoDatos.setConsutar("select Codigo from ARTICULOS");
-
-                accesoDatos.ejecutarLectura();
-
-                while (accesoDatos.Lector.Read())
-                {
-                    Articulo aux = new Articulo();
-                    aux.Codigo = (string)accesoDatos.Lector["Codigo"];
-
-                    lista.Add(aux);
-                }
-
-                for (int x = 0; x < lista.Count(); x++)
-                {
-                    string codigoExistente = lista[x].Codigo;
-
-                    if (codigoExistente.ToUpper() == codigo.ToUpper())
-                        return true;
-                }
-
-                return false;
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                accesoDatos.CerrarConection();
-            }
-        }
         public void ArticuloDelete(int Id)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
@@ -201,6 +163,136 @@ namespace Negocio
             {
 
                 accesoDatos.CerrarConection();
+            }
+        }
+
+        public List<Articulo> ArticuloFilter(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "select art.Id, art.Codigo, art.Nombre, art.Descripcion,art.ImagenUrl, art.Precio,art.IdMarca,cat.Descripcion as categoria,art.IdCategoria,mar.Descripcion as Marca  from ARTICULOS as art  join CATEGORIAS as cat  on art.IdCategoria= cat.Id join MARCAS as mar on art.IdMarca = mar.Id and ";
+
+                switch (campo)
+                {
+                    case "Id":
+                        switch (criterio)
+                        {
+                            case "Mayor a":
+                                consulta += "art.Id > " + filtro;
+                                break;
+                            case "Menor a":
+                                consulta += "art.Id < " + filtro;
+                                break;
+                            default:
+                                consulta += "art.Id = " + filtro;
+                                break;
+                        }
+                        break;
+
+                    case "Codigo":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "art.Codigo like '" + filtro + "%' ";
+                                break;
+                            case "Termina con":
+                                consulta += "art.Codigo like '%" + filtro + "'";
+                                break;
+                            default:
+                                consulta += "art.Codigo  like '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Nombre":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "art.Nombre like '" + filtro + "%' ";
+                                break;
+                            case "Termina con":
+                                consulta += "art.Nombre like '%" + filtro + "'";
+                                break;
+                            default:
+                                consulta += "art.Nombre like '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+
+                    case "Precio":
+                        switch (criterio)
+                        {
+                            case "Mayor a":
+                                consulta += "art.Precio > " + filtro;
+                                break;
+                            case "Menor a":
+                                consulta += "art.Precio < " + filtro;
+                                break;
+                            default:
+                                consulta += "art.Precio = " + filtro;
+                                break;
+                        }
+                        break;
+                    case "Marca":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "mar.Descripcion like '" + filtro + "%' ";
+                                break;
+                            case "Termina con":
+                                consulta += "mar.Descripcion like '%" + filtro + "'";
+                                break;
+                            default:
+                                consulta += "mar.Descripcion like '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+                    case "Categoria":
+                        switch (criterio)
+                        {
+                            case "Comienza con":
+                                consulta += "cat.Descripcion like '" + filtro + "%' ";
+                                break;
+                            case "Termina con":
+                                consulta += "cat.Descripcion like '%" + filtro + "'";
+                                break;
+                            default:
+                                consulta += "cat.Descripcion  like '%" + filtro + "%'";
+                                break;
+                        }
+                        break;
+
+                }
+
+                datos.setConsutar(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca = new Marca();
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

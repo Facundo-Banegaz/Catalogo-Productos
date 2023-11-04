@@ -38,11 +38,12 @@
             this.dgv_articulos = new System.Windows.Forms.DataGridView();
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.cbo_categoria = new System.Windows.Forms.ComboBox();
+            this.cbo_criterio = new System.Windows.Forms.ComboBox();
+            this.btn_limpiar = new FontAwesome.Sharp.IconButton();
+            this.cbo_campo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_buscador = new System.Windows.Forms.TextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btn_buscar = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
@@ -217,11 +218,12 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.iconButton3);
-            this.groupBox2.Controls.Add(this.cbo_categoria);
+            this.groupBox2.Controls.Add(this.cbo_criterio);
+            this.groupBox2.Controls.Add(this.btn_limpiar);
+            this.groupBox2.Controls.Add(this.cbo_campo);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txt_buscador);
-            this.groupBox2.Controls.Add(this.iconButton1);
+            this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 25);
             this.groupBox2.Name = "groupBox2";
@@ -230,37 +232,50 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de Articulos:";
             // 
-            // iconButton3
+            // cbo_criterio
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.Crimson;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton3.Location = new System.Drawing.Point(1208, 31);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(149, 46);
-            this.iconButton3.TabIndex = 69;
-            this.iconButton3.Text = "Limpiar";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.cbo_criterio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbo_criterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_criterio.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_criterio.FormattingEnabled = true;
+            this.cbo_criterio.Location = new System.Drawing.Point(631, 39);
+            this.cbo_criterio.Name = "cbo_criterio";
+            this.cbo_criterio.Size = new System.Drawing.Size(395, 47);
+            this.cbo_criterio.TabIndex = 70;
             // 
-            // cbo_categoria
+            // btn_limpiar
             // 
-            this.cbo_categoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_categoria.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbo_categoria.FormattingEnabled = true;
-            this.cbo_categoria.Location = new System.Drawing.Point(243, 39);
-            this.cbo_categoria.Name = "cbo_categoria";
-            this.cbo_categoria.Size = new System.Drawing.Size(736, 47);
-            this.cbo_categoria.TabIndex = 66;
+            this.btn_limpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_limpiar.BackColor = System.Drawing.Color.Crimson;
+            this.btn_limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_limpiar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_limpiar.ForeColor = System.Drawing.Color.White;
+            this.btn_limpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.btn_limpiar.IconColor = System.Drawing.Color.White;
+            this.btn_limpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_limpiar.IconSize = 30;
+            this.btn_limpiar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_limpiar.Location = new System.Drawing.Point(1208, 31);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(149, 46);
+            this.btn_limpiar.TabIndex = 69;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_limpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
+            // 
+            // cbo_campo
+            // 
+            this.cbo_campo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbo_campo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_campo.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_campo.FormattingEnabled = true;
+            this.cbo_campo.Location = new System.Drawing.Point(219, 39);
+            this.cbo_campo.Name = "cbo_campo";
+            this.cbo_campo.Size = new System.Drawing.Size(392, 47);
+            this.cbo_campo.TabIndex = 66;
+            this.cbo_campo.SelectedIndexChanged += new System.EventHandler(this.cbo_campo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -283,26 +298,27 @@
             this.txt_buscador.Size = new System.Drawing.Size(765, 47);
             this.txt_buscador.TabIndex = 65;
             // 
-            // iconButton1
+            // btn_buscar
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.iconButton1.Location = new System.Drawing.Point(1032, 31);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(158, 46);
-            this.iconButton1.TabIndex = 64;
-            this.iconButton1.Text = "Buscar";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.ForeColor = System.Drawing.Color.White;
+            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_buscar.IconColor = System.Drawing.Color.White;
+            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buscar.IconSize = 30;
+            this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_buscar.Location = new System.Drawing.Point(1032, 31);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(158, 46);
+            this.btn_buscar.TabIndex = 64;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // pbx_img
             // 
@@ -357,11 +373,12 @@
         private FontAwesome.Sharp.IconButton btn_eliminar;
         private FontAwesome.Sharp.IconButton btn_guardar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btn_limpiar;
+        private FontAwesome.Sharp.IconButton btn_buscar;
         private System.Windows.Forms.TextBox txt_buscador;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbo_categoria;
+        private System.Windows.Forms.ComboBox cbo_campo;
         private System.Windows.Forms.PictureBox pbx_img;
+        private System.Windows.Forms.ComboBox cbo_criterio;
     }
 }

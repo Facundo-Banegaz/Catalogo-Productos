@@ -10,14 +10,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
-
+using System.Configuration;
+using System.IO;
 
 namespace GestorDeCatalogos
 {
     public partial class FrmCargar : Form
     {
         private Articulo articulo = null;
-
+        private OpenFileDialog archivo = null;
         public FrmCargar()
         {
             InitializeComponent();
@@ -229,6 +230,18 @@ namespace GestorDeCatalogos
         private void txt_img_Leave(object sender, EventArgs e)
         {
             cargarImg(txt_img.Text);
+        }
+
+        private void btn_img_local_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txt_img.Text = archivo.FileName;
+                cargarImg(archivo.FileName);
+
+            }
         }
     }
 }

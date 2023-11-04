@@ -27,9 +27,22 @@ namespace GestorDeCatalogos
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
             cargarGrilla();
+            cargadCbo();
         }
 
+        private void cargadCbo()
+        {
 
+            cbo_campo.Items.Add("Id");
+            cbo_campo.Items.Add("Codigo");
+            cbo_campo.Items.Add("Nombre");
+            cbo_campo.Items.Add("Marca");
+            cbo_campo.Items.Add("Categoria");
+            cbo_campo.Items.Add("Precio");
+
+           
+
+        }
         private void cargarGrilla()
         {
 
@@ -125,9 +138,54 @@ namespace GestorDeCatalogos
             }
         }
 
+        private void cbo_campo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cbo_campo.SelectedItem.ToString();
+
+            if(opcion == "Id" || opcion == "Precio")
+            {
+                cbo_criterio.Items.Clear();
+                cbo_criterio.Items.Add("Mayor a");
+                cbo_criterio.Items.Add("Menor a");
+                cbo_criterio.Items.Add("Igual a");
+            }
+            else if(opcion== "Codigo" || opcion=="Nombre" || opcion=="Marca" || opcion=="Categoria") 
+            {
+                cbo_criterio.Items.Clear();
+                cbo_criterio.Items.Add("Comienza con");
+                cbo_criterio.Items.Add("Termina con");
+                cbo_criterio.Items.Add("Igual a");
+
+            }
 
 
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_buscador.Clear();
+            cargarGrilla();
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            LogicaArticulo  logicaArticulo = new LogicaArticulo();
+
+            try
+            {
+                string campo = cbo_campo.SelectedItem.ToString();
+                string criterio = cbo_criterio.SelectedItem.ToString();
+                string filtro = txt_buscador.Text;
+
+                dgv_articulos.DataSource = logicaArticulo.ArticuloFilter(campo,criterio,filtro);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
 
+        }
     }
-}
+}   

@@ -220,6 +220,7 @@
             this.btn_limpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_limpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // label1
             // 

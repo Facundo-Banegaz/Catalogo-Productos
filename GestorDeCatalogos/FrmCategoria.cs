@@ -30,7 +30,6 @@ namespace GestorDeCatalogos
         private void FrmCategoria_Load(object sender, EventArgs e)
         {
             cargarGrilla();
-
         }
 
         private void cargarGrilla()
@@ -87,7 +86,36 @@ namespace GestorDeCatalogos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+            List<Categoria> listCategorias;
 
+
+            string fitro = txt_buscador.Text;
+
+
+
+            if (fitro.Length >= 1)
+            {
+
+
+                listCategorias = listaCategoria.FindAll(x => x.Descripcion.ToUpper().Contains(fitro.ToUpper()) || x.Descripcion.ToUpper().Contains(fitro.ToUpper()));
+            }
+            else
+            {
+                MessageBox.Show("El campo no puede ser vacio!!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                listCategorias = listaCategoria;
+
+            }
+
+            dgv_categorias.DataSource = null;
+
+            dgv_categorias.DataSource = listCategorias;
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_buscador.Clear();
+            cargarGrilla();
         }
     }
 }

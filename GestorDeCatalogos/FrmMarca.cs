@@ -74,6 +74,7 @@ namespace GestorDeCatalogos
         private void FrmMarca_Load(object sender, EventArgs e)
         {
             cargarGrilla();
+
         }
         private void cargarGrilla()
         {
@@ -87,7 +88,36 @@ namespace GestorDeCatalogos
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+            List<Marca> listMarcas;
 
+
+            string fitro = txt_buscador.Text;
+
+
+
+            if (fitro.Length >=1)
+            {
+
+                
+                listMarcas = listaMarcas.FindAll(x => x.Descripcion.ToUpper().Contains(fitro.ToUpper()) || x.Descripcion.ToUpper().Contains(fitro.ToUpper()));
+            }
+            else
+            {
+                 MessageBox.Show("El campo no puede ser vacio!!","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    listMarcas = listaMarcas;
+
+            }
+
+            dgv_marcas.DataSource = null;
+
+            dgv_marcas.DataSource = listMarcas;
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_buscador.Clear();
+            cargarGrilla();
         }
     }
 }
