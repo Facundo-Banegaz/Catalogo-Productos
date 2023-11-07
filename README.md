@@ -1,5 +1,5 @@
 # Presentacion del TP-Final-Nivel-2
-##Se creo un programa en Windows Forms en C# con una base de datos que permita realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en un catálogo es una aplicación común en el desarrollo de software. A continuación, te proporcionaré una descripción general de cómo podrías implementar este programa:
+#Se creo un programa en Windows Forms en C# con una base de datos que permita realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en un catálogo es una aplicación común en el desarrollo de software. A continuación, te proporcionaré una descripción general de cómo podrías implementar este programa:
 #Nombre del programa: Catálogo de Productos
 
 Descripción general:
@@ -36,6 +36,8 @@ Se proporcionan mensajes de notificación y error para informar a los usuarios s
 
 
 #Inicio de la aplicacion.
+
+
 <img width="513" alt="inicio" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/2538b9e8-30d4-40d0-8baa-ce5e5a7cbba1">
 
 
