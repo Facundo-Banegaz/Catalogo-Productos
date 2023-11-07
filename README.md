@@ -33,6 +33,8 @@ Se implementa una validación de datos en formularios para garantizar que los ca
 Notificaciones y mensajes de error:
 
 Se proporcionan mensajes de notificación y error para informar a los usuarios sobre el éxito o el fracaso de las operaciones CRUD.
+
+
 #Inicio de la aplicacion.
 <img width="513" alt="inicio" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/2538b9e8-30d4-40d0-8baa-ce5e5a7cbba1">
 
