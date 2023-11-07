@@ -57,7 +57,7 @@
             this.panel_contenedor_articulo.Controls.Add(this.label16);
             this.panel_contenedor_articulo.Location = new System.Drawing.Point(2, 12);
             this.panel_contenedor_articulo.Name = "panel_contenedor_articulo";
-            this.panel_contenedor_articulo.Size = new System.Drawing.Size(398, 830);
+            this.panel_contenedor_articulo.Size = new System.Drawing.Size(398, 719);
             this.panel_contenedor_articulo.TabIndex = 5;
             // 
             // gbo_container
@@ -147,7 +147,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.HighlightText;
             this.label16.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, -71);
+            this.label16.Location = new System.Drawing.Point(30, -182);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(191, 35);
             this.label16.TabIndex = 41;
@@ -198,7 +198,7 @@
             this.groupBox2.Size = new System.Drawing.Size(1372, 100);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Lista de Articulos:";
+            this.groupBox2.Text = "Lista de Marcas:";
             // 
             // btn_limpiar
             // 

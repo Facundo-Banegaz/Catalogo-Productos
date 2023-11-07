@@ -69,5 +69,15 @@ namespace GestorDeCatalogos.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotoDePresentacion__1__removebg_preview__2__removebg_preview__2_ {
+            get {
+                object obj = ResourceManager.GetObject("fotoDePresentacion__1_-removebg-preview__2_-removebg-preview (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
