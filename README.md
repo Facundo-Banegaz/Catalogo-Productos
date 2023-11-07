@@ -1,4 +1,4 @@
-<img width="959" alt="cargar-cat" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/50ecafb0-7618-42d5-af8f-37936d7d6153"># Presentacion del TP-Final-Nivel-2
+# Presentacion del TP-Final-Nivel-2
 ##Se creo un programa en Windows Forms en C# con una base de datos que permita realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en un catálogo es una aplicación común en el desarrollo de software. A continuación, te proporcionaré una descripción general de cómo podrías implementar este programa:
 #Nombre del programa: Catálogo de Productos
 
@@ -34,34 +34,38 @@ Notificaciones y mensajes de error:
 
 Se proporcionan mensajes de notificación y error para informar a los usuarios sobre el éxito o el fracaso de las operaciones CRUD.
 #Inicio de la aplicacion.
+<img width="513" alt="inicio" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/2538b9e8-30d4-40d0-8baa-ce5e5a7cbba1">
 
-<img width="513" alt="inicio" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/d32da347-57b6-4cca-b154-7d31875f95be">
 
 #Pantalla principal en donde se encuentran contenidas las demas pantallas.
+<img width="959" alt="catalogo" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/c1975e33-91c3-4fad-996e-e3ddf2e29251">
 
-<img width="959" alt="catalogo" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/77f5570d-ad93-4bf1-9040-f58028a8b9dc">
 
 #La pantalla Articulo cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias.
 
-<img width="955" alt="pantalla-articulo" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/ce4c8c1d-2a57-489e-a1d9-fc5fba5dcf36">
+<img width="955" alt="pantalla-articulo" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/d6a4a14a-aae6-4ca4-b747-99b7faa119bf">
+
 
 #Pantalla de Detalles.
-<img width="683" alt="detalle" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/fd7d63bc-7b0e-412a-9483-d4d0aa83fb97">
+
+<img width="683" alt="detalle" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/69a43bfc-9604-4fa7-80d4-2c765944c688">
+
 
 #Filtro para facilitar la busquedas.
-<img width="817" alt="filtro" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/f98ea04b-7ea7-4d87-a583-da84fde1534f">
+<img width="817" alt="filtro" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/34129669-b7eb-4c89-b99d-8f093c65584d">
 
 #Pantalla Categoria cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias.
 
-<img width="960" alt="categoria" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/a61ceb24-d50d-4cc7-bae5-903b983f6688">
-#Pantalla Marcas cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias.
+<img width="960" alt="categoria" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/63c77687-8086-4008-8d79-03a0c1ff6532">
 
-<img width="953" alt="marcas" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/e53efbc8-a621-48b0-92fb-bfedbcf8305c">
-#Las pantallas de Marcas y Categorias tambien cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias.
-<img width="959" alt="cargar-cat" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/98d06bc6-6fed-4c94-8600-083acfeee275">
+
+
+
+#Las pantallas de Marcas y Categorias tambien cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias
+<img width="959" alt="cargar-cat" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/22e2a933-ec1e-4b8e-83a7-dddeb1110db4">
+
+
 #Finalmente se creo una pantalla en donde se Muestra el Desarrollador de la aplicacion de escritorio.
+<img width="960" alt="acerca-de" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/9be16803-60d1-42a0-9539-73f8ed695a10">
 
-
-
-<img width="960" alt="acerca-de" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/41cf3906-fae4-44f9-a2eb-ecd8b1edbbf6">
 
