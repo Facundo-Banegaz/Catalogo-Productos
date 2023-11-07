@@ -45,6 +45,8 @@
             this.txt_buscador = new System.Windows.Forms.TextBox();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
             this.pbx_img = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_articulos)).BeginInit();
@@ -218,6 +220,8 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbo_criterio);
             this.groupBox2.Controls.Add(this.btn_limpiar);
             this.groupBox2.Controls.Add(this.cbo_campo);
@@ -332,6 +336,30 @@
             this.pbx_img.TabIndex = 3;
             this.pbx_img.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(381, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Campos:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(783, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Criterios:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -380,5 +408,7 @@
         private System.Windows.Forms.ComboBox cbo_campo;
         private System.Windows.Forms.PictureBox pbx_img;
         private System.Windows.Forms.ComboBox cbo_criterio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

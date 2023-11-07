@@ -32,21 +32,16 @@ namespace GestorDeCatalogos
 
         private void cargadCbo()
         {
-
+            cbo_campo.Items.Clear();
             cbo_campo.Items.Add("Id");
             cbo_campo.Items.Add("Codigo");
             cbo_campo.Items.Add("Nombre");
             cbo_campo.Items.Add("Marca");
             cbo_campo.Items.Add("Categoria");
             cbo_campo.Items.Add("Precio");
-
-           
-
         }
         private void cargarGrilla()
         {
-
-
             //logica del dataGridView
             LogicaArticulo logicaArticulo = new LogicaArticulo();
 
@@ -80,11 +75,18 @@ namespace GestorDeCatalogos
         private void btn_editar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado;
-            seleccionado = (Articulo)dgv_articulos.CurrentRow.DataBoundItem;
 
-            FrmCargar frmEditar = new FrmCargar(seleccionado);
-            frmEditar.ShowDialog();
-            cargarGrilla();
+            DialogResult respuesta = MessageBox.Show("¿Quieres Editar este Articulo?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                seleccionado = (Articulo)dgv_articulos.CurrentRow.DataBoundItem;
+                FrmCargar frmEditar = new FrmCargar(seleccionado);
+
+
+                frmEditar.ShowDialog();
+                cargarGrilla();
+            }
         }
 
 
@@ -173,6 +175,8 @@ namespace GestorDeCatalogos
 
             try
             {
+                if (validarCampo())
+                    return;
                 string campo = cbo_campo.SelectedItem.ToString();
                 string criterio = cbo_criterio.SelectedItem.ToString();
                 string filtro = txt_buscador.Text;
@@ -187,5 +191,47 @@ namespace GestorDeCatalogos
 
 
         }
+
+        private bool validarCampo()
+        {
+
+            if (cbo_campo.SelectedIndex < 0) 
+            {
+                MessageBox.Show("Por favor, Seleccione el campo para filtrar.");
+                return true;
+            }
+            if(cbo_criterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, Seleccione el Criteria a filtrar.");
+                return true;
+            }
+            if(cbo_campo.SelectedItem.ToString() == "Id" || cbo_campo.SelectedItem.ToString() == "Precio")
+            {
+                if(string.IsNullOrEmpty(txt_buscador.Text))
+                {
+                    MessageBox.Show("El campo no puede Quedar vacio", "Warning");
+                    
+                    return true;
+                }
+                if(!(soloNumeros(txt_buscador.Text)))
+                {
+                    MessageBox.Show("Solo se pueden cargar numeros!!", "Warning");
+                    txt_buscador.Clear();
+                    return true;
+                }
+            }
+            return false;
+        }
+    
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+    
     }
 }   

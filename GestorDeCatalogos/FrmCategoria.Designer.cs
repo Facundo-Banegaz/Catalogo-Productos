@@ -38,9 +38,9 @@
             this.panel_filtro = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_limpiar = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_buscador = new System.Windows.Forms.TextBox();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_contenedor_articulo.SuspendLayout();
             this.gbo_container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categorias)).BeginInit();
@@ -188,8 +188,8 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox2.Controls.Add(this.btn_limpiar);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btn_limpiar);
             this.groupBox2.Controls.Add(this.txt_buscador);
             this.groupBox2.Controls.Add(this.btn_buscar);
             this.groupBox2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,17 +222,6 @@
             this.btn_limpiar.UseVisualStyleBackColor = false;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 29);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Buscar por:";
-            // 
             // txt_buscador
             // 
             this.txt_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -242,6 +231,7 @@
             this.txt_buscador.Name = "txt_buscador";
             this.txt_buscador.Size = new System.Drawing.Size(675, 47);
             this.txt_buscador.TabIndex = 65;
+            this.txt_buscador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscador_KeyPress);
             // 
             // btn_buscar
             // 
@@ -264,6 +254,17 @@
             this.btn_buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 22);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "Barra De Busqueda:";
             // 
             // FrmCategoria
             // 
@@ -301,8 +302,8 @@
         private System.Windows.Forms.Panel panel_filtro;
         private System.Windows.Forms.GroupBox groupBox2;
         private FontAwesome.Sharp.IconButton btn_limpiar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_buscador;
         private FontAwesome.Sharp.IconButton btn_buscar;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -53,11 +53,17 @@ namespace GestorDeCatalogos
         private void btn_editar_Click(object sender, EventArgs e)
         {
             Categoria categoriaSeleccionada;
-            categoriaSeleccionada = (Categoria)dgv_categorias.CurrentRow.DataBoundItem;
 
-            FrmAgregarCategoria frmModificarCategoria = new FrmAgregarCategoria(categoriaSeleccionada);
-            frmModificarCategoria.ShowDialog();
-            cargarGrilla();
+            DialogResult respuesta = MessageBox.Show("¿Quieres Editar esta Categoria?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+                categoriaSeleccionada = (Categoria)dgv_categorias.CurrentRow.DataBoundItem;
+
+                FrmAgregarCategoria frmModificarCategoria = new FrmAgregarCategoria(categoriaSeleccionada);
+                frmModificarCategoria.ShowDialog();
+                cargarGrilla();
+            }
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -116,6 +122,16 @@ namespace GestorDeCatalogos
         {
             txt_buscador.Clear();
             cargarGrilla();
+        }
+
+        private void txt_buscador_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
