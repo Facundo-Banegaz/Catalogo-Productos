@@ -50,6 +50,8 @@ Se proporcionan mensajes de notificación y error para informar a los usuarios s
 
 <img width="955" alt="pantalla-articulo" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/d6a4a14a-aae6-4ca4-b747-99b7faa119bf">
 
+<img width="524" alt="img32" src="https://github.com/Facundo-Banegaz/Catalogo-Productos/assets/130815244/7c8c39d1-cad4-46b7-bdcf-63b87f5e41b0">
+<img width="526" alt="im33" src="https://github.com/Facundo-Banegaz/Catalogo-Productos/assets/130815244/52fc51e2-f5ea-4b26-8d23-a65cd61fb4ff">
 
 #Pantalla de Detalles.
 
@@ -69,8 +71,5 @@ Se proporcionan mensajes de notificación y error para informar a los usuarios s
 #Las pantallas de Marcas y Categorias tambien cuenta con  las operaciones CRUD (Crear, Leer, Actualizar y Eliminar)  cuales  son botones que contienen pantallas secundarias
 <img width="959" alt="cargar-cat" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/22e2a933-ec1e-4b8e-83a7-dddeb1110db4">
 
-
-#Finalmente se creo una pantalla en donde se Muestra el Desarrollador de la aplicacion de escritorio.
-<img width="960" alt="acerca-de" src="https://github.com/Facundo-Banegaz/TP-Final-Nivel-2/assets/130815244/9be16803-60d1-42a0-9539-73f8ed695a10">
 
 
